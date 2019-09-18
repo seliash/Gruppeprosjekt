@@ -20,3 +20,9 @@ p, li {
   font-size: 1.2 em;
   line-height: 150%;
 }
+
+footer{
+  font-size: .7em;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
