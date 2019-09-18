@@ -16,7 +16,7 @@ h1{
   font-size: 1.8 em;
 }
 
-p {
+p, li {
   font-size: 1.2 em;
   line-height: 150%;
 }
