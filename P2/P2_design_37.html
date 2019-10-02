@@ -43,24 +43,25 @@
       Navigasjonsstruktur
     </h2>
     <p>
-      Navigasjonsstrukturen til siden kommer til å være hierarkisk, da et av ønskene til kunden
+      Navigasjonsstrukturen til siden kommer til å være hierarkisk, da et av ønskene til klienten
       var at brukere skulle kunne nå så mange av sidene som mulig på så få klikk som mulig.
       Vi har en startside som du kommer til når du skriver in webadressen til nettsiden,
-      og denne skal du alltid kunne komme tilbake til ved å trykke på logoen til kunden.
+      og denne skal du alltid kunne komme tilbake til ved å trykke på logoen til klienten.
       Siden vil ha en navigasjonsbar som alltid ligger langs toppen av siden, så du kan alltid
       navigere fra enhver side, til enhver side (med unntak av artikler,
       de kan man bare navigere til gjennom startsiden).
-      Navigasjonsbaren vil linke til fem generasjon en undersider, og to av disse vil igjen linke
-      til flere generasjon to undersider.
-      Du kan komme deg til andre generasjons undersider enten ved å trykke på hyperlinkene til
-      første generasjons undersidener på navigasjonsbaren i hovedsiden, og deretter trykke på
-      en av linkene til andre generasjonen i denne første generasjons undersiden,
-      eller du kan gå direkte til undersiden ved å la musen sveve over linken til hovedundersiden,
-      og deretter trykke på linken til undersiden som da dukker opp.
+      Navigasjonsbaren vil linke til fem "generasjon én"-undersider, og to av disse vil igjen linke
+      til flere "generasjon to"-undersider.
+      Du kan komme deg til "generasjon to"-undersidene enten ved å trykke på hyperlinkene til
+      "generasjon en"-undersidene på navigasjonsbaren i hovedsiden, og deretter trykke på
+      en av linkene til "generasjon to"-sidene fra "generasjon en"-undersiden,
+      eller du kan gå direkte til "generasjon to"-undersiden ved å la musen sveve over linken
+      til "generasjon en"-undersiden, deretter trykke på linken som da dukker opp.
       Siden vil i tillegg til en navigasjonsbar, også ha en footer som er felles for alle sidene
-      på hjemmesiden, som viser kontaktinformasjon til kunden.
-      Logoen til kunden vil også alltid vises øverst i venstre hjørne, så man kan klikke på den
+      på hjemmesiden, som viser kontaktinformasjon til klienten.
+      Logoen til klienten vil også alltid vises øverst i venstre hjørne, så man kan klikke på den
       og alltid komme seg tilbake til startsiden.
+      <img class="Mockup" src="../Images/Sidestruktur.png" alt="Sidestruktur mockup">
     </p>
 
     <h2>
@@ -92,7 +93,7 @@
       <li>Navigasjonsbar: Knappene til de ulike undersidene endrer farge når
       musepekeren svever over de, og blir den samme rødfargen som i logoen og footeren,
       samtidig som teksten blir hvit. I tillegg hvis denne undersiden leder til
-      flere undersider vil lenker til disse dukke opp som en "rullegardin" av flere knapper
+      flere undersider vil lenker til disse dukke opp som en "rullgardin" av flere knapper
       med samme farge og tekstfarge.</li>
       <li>Banner: Et eller flere bilder på rundgang</li>
       <li>Body max-bredde: 80%</li>
@@ -103,12 +104,12 @@
     </h2>
     <h3>Startside</h3>
     <p>
-      Startsiden er siden man ender opp på når man følger linken til hjemmesiden til kunden.
+      Startsiden er siden man ender opp på når man følger linken til hjemmesiden til klienten.
       Den skal inneholde en bildeserie som banner øverst på siden,
       hvor en serie med bilder skal veksle på å vises.
       På høyre side av startsiden skal det ligge en embedded Google Calendar.
       Grunnen til at vi bruker Google Calendar er for at det skal være lett
-      for kunden å legge inn events i kalenderen. Det skal også være mulighet til å legge inn artikler
+      for klienten å legge inn events i kalenderen. Det skal også være mulighet til å legge inn artikler
       på startsiden, og nye artikler skal legge seg på toppen. Man skal også ha mulighet til å feste
       artikler på toppen av startsiden som festede innlegg. Vi er ikke helt sikre på hvordan vi skal
       gjøre dette ennå, men regner med at vi trenger noe JavaScript.
@@ -136,8 +137,7 @@
     <p>
       Disse sidene har info om de ulike undergruppene.
       De skal inneholde en beskrivelse av hva undergruppen gjør og har ansvar for.
-      De skal også inneholde et bilde av gruppelederen, et gruppebilde eller enkeltbilder av
-      gruppemedlemmene, og navn på alle medlemmene i undergruppen, eventuelt med en kort beskrivelse.
+      De skal også inneholde et bilde av gruppelederen og et gruppebilde med medlemmene.
       Navnene på de ulike gruppene er Bygg, Kostyme og Rekvisitter, Dans, Musikk og Band,
       PR og Design, Velferd, Skribent, Økonomi, og Teknikk.
       <img class="Mockup" src="../Images/Spesifikk_undergruppe.png" alt="Spesifikk Undergruppe Mockup">
@@ -179,12 +179,14 @@
       og også finne bilder til for eksempel promotering.
       Det unike med denne siden er at vi må embedde YouTube-videoer
       og lage bildeserier så man kan gå gjennom bildene fra tidligere år på en grei måte.
+      Hvis vi får det til, ønsker vi å kunne sortere bildeserier basert på hvilket
+      album de besøkende til nettsiden ønsker å se basert på en dropdown-meny eller noe lignende.
       <img class="Mockup" src="../Images/Arkiv.png" alt="Arikv mockup">
     </p>
 
     <h3>Artikkel</h3>
     <p>
-      Artikkel-sidene er generiske sider som kunden selv skal ha mulighet til å lage,
+      Artikkel-sidene er generiske sider som klienten selv skal ha mulighet til å lage,
       og de skal vises på forsiden. Man kommer til disse sidene ved å trykke på artiklene
       på startsiden, men det vil strengt tatt ikke være nødvendig å besøke dem,
       siden de vises på startsiden. Disse sidene skal inneholde tekst, bilder og evt. video.
