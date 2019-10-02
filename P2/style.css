@@ -26,3 +26,13 @@ footer{
   margin-top: 30px;
   margin-bottom: 5px;
 }
+
+.Mockup{
+  position: relative;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  border: black;
+  border-width: thick;
+  border-style: solid;
+}
