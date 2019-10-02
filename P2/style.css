@@ -43,6 +43,11 @@ table, th, td {
   font-size: 1.2em;
   text-align: center;
 }
+table{
+  position: relative;
+  margin: auto;
+  display: block;
+}
 
 li {
 	line-height: 150%;
