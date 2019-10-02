@@ -27,6 +27,16 @@ footer{
   margin-bottom: 5px;
 }
 
+.Mockup{
+  position: relative;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  border: black;
+  border-width: thick;
+  border-style: solid;
+}
+
 table, th, td {
 	border: 1px solid black;
 }
