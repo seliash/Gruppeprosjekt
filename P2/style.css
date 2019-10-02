@@ -10,6 +10,7 @@ body{
   font-family: sans-serif;
   width: auto;
   max-width: 60%;
+  padding-bottom: 5%;
 }
 
 h1{
@@ -39,6 +40,13 @@ footer{
 
 table, th, td {
 	border: 1px solid black;
+  font-size: 1.2em;
+  text-align: center;
+}
+table{
+  position: relative;
+  margin: auto;
+  display: block;
 }
 
 li {
