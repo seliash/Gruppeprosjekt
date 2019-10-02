@@ -16,7 +16,7 @@ h1{
   font-size: 1.8em;
 }
 
-p, li {
+p {
   font-size: 1.2em;
   line-height: 150%;
 }
@@ -35,4 +35,8 @@ footer{
   border: black;
   border-width: thick;
   border-style: solid;
+}
+
+li {
+  line-height: 150%;
 }
