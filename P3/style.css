@@ -2,6 +2,7 @@
   font-family: Helvetica, sans-serif;
 }
 
+
 .Arkiv_Bilder{
 
   display: grid;
@@ -71,6 +72,14 @@ iframe{
 /*  border-radius: 10px;
   border-color: red;
   border-style: solid;*/
+}
+#hovedside_body{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+#hovedside_boks{
+  grid-column: 1/3;
+  justify-content: center;
 }
 .arkiv_title , .arkiv_title_3{
   margin: 0;
