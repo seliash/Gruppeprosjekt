@@ -43,21 +43,7 @@
   height: 100%;
 }
 
-.entire_page{
-  display: grid;
-  grid-template: 80px 1fr 10%/10% 1fr 10%;
-  min-height: 100vh; /*siden skal dekke hele viewporten*/
-  margin: 0;
-
-}
-
-.header_element{
-  display: flex;
-  grid-area: 1/1/2/4;
-  background-color: gray;
-}
-
-.body_element{
+.center_element{
   display: flex;
   grid-area: 2/2/3/3;
   flex-direction: column;
