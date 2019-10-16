@@ -31,7 +31,7 @@ img{
 }
 iframe{
   /*TODO: trenger å sette iframe høyde lik 9/16 av bredden */
-
+width: 100%;
   }
 
 /*
@@ -81,6 +81,10 @@ iframe{
 #festet{
  grid-column: 3;
  grid-row: 1/3;
+}
+#kalender_boks{
+  grid-column: 4;
+  grid-row: 1/3;
 }
 .arkiv_title , .arkiv_title_3{
   margin: 0;
