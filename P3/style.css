@@ -1,0 +1,40 @@
+html, body{
+  margin: auto;
+  padding: 0;
+  height: 80%
+}
+
+body{
+  background-color: crimson;
+  font-family: Helvetica, sans-serif;
+  width: auto;
+  max-width: 60%;
+}
+
+a{
+  position: relative;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  border: black;
+  border-width: thick;
+  border-style: solid;
+}
+
+h1{
+  text-align: center;
+}
+#area{
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.image{
+  position: relative;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  border: black;
+  border-width: thick;
+  border-style: solid;
+}
