@@ -19,10 +19,10 @@ header_element.style.gridArea = "1/1/2/4"
 header_element.style.backgroundColor = "gray"
 
 //Styling for center-elementet
-document.getElementById("center_element").style.display = "flex"
-document.getElementById("center_element").style.gridArea = "2/2/3/3"
-document.getElementById("center_element").style.flexDirection = "column"
-document.getElementById("center_element").style.backgroundColor = "lightgray"
+document.getElementsByClassName("center_element")[0].style.display = "flex"
+document.getElementsByClassName("center_element")[0].style.gridArea = "2/2/3/3"
+document.getElementsByClassName("center_element")[0].style.flexDirection = "column"
+document.getElementsByClassName("center_element")[0].style.backgroundColor = "lightgray"
 
 //Styling for footer-elementet
 footer_element.style.display = "flex"
