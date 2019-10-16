@@ -21,12 +21,10 @@
 .arkiv_video_omrade iframe{
   width: 100%;
 }
+iframe{
+  /*TODO: trenger å sette iframe høyde lik 9/16 av bredden */
 
-.abc{
-   grid-area: 3/2;
-   background-color: red;
- }
-
+  }
 
 /*
 .arkiv_body{
