@@ -8,40 +8,55 @@ img{
 
 
 .Arkiv_Bilder{
-
+  min-height: 10vh;
   display: grid;
-  grid-template-rows: 0.2fr 1fr;
+  grid-template-rows: 0.15fr 1fr;
   grid-template-columns: repeat(5,1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 0px;
+  justify-content: center;
 
 }
-.Arkiv_Bilder img{
+.hoverable{ /* alle bilder i arkivet har denne*/
+  width: 95%; /*Maks størrelse skal være grid størrelsen til Arkiv_Bilder*/
+  padding: 2.5%;
+}
+.hoverable:hover{
+  width: 100%;
   max-width: 100%; /*Maks størrelse skal være grid størrelsen til Arkiv_Bilder*/
+  padding:0%;
+}
+.img_in_focus{ /* brukes for å få et bilde i fokus*/
+  position: absolute;
+  width: 70%;
+  left: 0px;
+  top:80px;
+  padding: 10vh 15vw 0px 15vw;
+
+  /*i js, settes paddingBottom resterende arkiv høyde*/
+  background-color: rgba(0,0,0,0.7);
 
 }
+
 .arkiv_video_omrade{
 
   display: grid;
+  grid-template-rows: 0.15fr 1fr;
   grid-template-columns: repeat(3,1fr);
   grid-column-gap: 10px;
+
   justify-content: center;
 }
 .arkiv_video_omrade iframe{
+  min-height: 10vh;
   width: 100%;
+  height: 20vh;
 }
 iframe{
   /*TODO: trenger å sette iframe høyde lik 9/16 av bredden */
 width: 100%;
+height: 100%
   }
 
-/*
-.arkiv_body{
-  max-width: 100%;
-  display: grid;
-  grid-template-rows: 1fr 3fr 3fr  1fr;
-  grid-template-columns: 1fr 8fr 1fr;
-}
-*/
 .html_shell{
   height: 100%;
 }
