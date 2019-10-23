@@ -6,6 +6,11 @@ img{
   max-height: 100%;
 }
 
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333333;
+}
 
 .Arkiv_Bilder{
 
@@ -102,4 +107,23 @@ width: 100%;
   position: absolute;
   max-width: 80px;
   max-height: 80px;
+}
+
+.gruppeboks {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.gruppetekst {
+  grid-column: 1/3;
+  padding: 20px;
+}
+
+.gruppeleder {
+  grid-column: 3;
+  padding: 20px;
+}
+
+.lederbilde {
+
 }
