@@ -1,6 +1,8 @@
 let header_element = document.createElement("div")
 let logo_image = document.createElement("img")
 let footer_element = document.createElement("div")
+let left_header_element = document.createElement("div")
+let right_header_element = document.createElement("div")
 
 //Setter diverse html-attributter
 document.getElementsByTagName("html")[0].lang = "no-nb"
@@ -28,14 +30,22 @@ document.getElementsByClassName("center_element")[0].style.backgroundColor = "li
 //Styling for footer-elementet
 footer_element.style.display = "flex"
 footer_element.style.gridArea = "3/1/4/4"
-footer_element.style.backgroundColor = "darkgray"
+footer_element.style.backgroundColor = "#a01405"
+
+//Styling for left_header_element og right_header_element
+left_header_element.style.gridarea = "1/1/2/2"
+right_header_element.style.gridarea = "1/3/2/4"
+left_header_element.style.backgroundColor = "#a01405"
+right_header_element.style.backgroundColor = "#a01405"
 
 //Styling for logobildet
 logo_image.style.maxHeight = "80px"
 
-//Legger header-element inn i body
+//Legger header-elementer inn i body
 header_element.className = "header_element"
 document.body.appendChild(header_element)
+document.body.appendChild(left_header_element)
+document.body.appendChild(right_header_element)
 
 //Legger logo inn i header-element
 logo_image.id = "logo_image"
