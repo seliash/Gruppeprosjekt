@@ -98,8 +98,30 @@ width: 100%;
   grid-column: 1/4;
 }
 
-#logo_image{
-  position: absolute;
-  max-width: 80px;
-  max-height: 80px;
+.navbar{
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li{
+  float: left;
+  height: 80px;
+}
+
+.navbar li a{
+  display: flex;
+  align-items: center;
+  color: #ffce46;
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  background-color: #a01405;
+  height: 100%;
+  font-size: 1.3em;
+}
+
+.navbar li a:hover{
+  background-color: #821308;
 }
