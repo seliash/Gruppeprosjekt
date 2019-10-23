@@ -61,6 +61,12 @@ width: 100%;
   border-color: red;
   border-style: solid;*/
 }
+.banner{
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+}
 #hovedside_boks{
   display: grid;
   grid-template-columns: repeat(4,1fr);
