@@ -6,6 +6,11 @@ img{
   max-height: 100%;
 }
 
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333333;
+}
 
 .Arkiv_Bilder{
   min-height: 10vh;
@@ -71,6 +76,12 @@ height: 100%
   border-color: red;
   border-style: solid;*/
 }
+.banner{
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+}
 #hovedside_boks{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -113,8 +124,66 @@ height: 100%
   grid-column: 1/4;
 }
 
-#logo_image{
-  position: absolute;
-  max-width: 80px;
-  max-height: 80px;
+.navbar{
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li{
+  float: left;
+  height: 80px;
+}
+
+.navbar li a{
+  display: flex;
+  align-items: center;
+  color: #ffce46;
+  text-decoration: none;
+  padding: 0 15px 0 15px;
+  background-color: #a01405;
+  height: 100%;
+  font-size: 1.3em;
+}
+
+.navbar li a:hover{
+  background-color: #821308;
+}
+
+.gruppeboks {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.gruppetekst {
+  grid-column: 1/3;
+  padding: 20px;
+}
+
+.gruppeleder {
+  grid-column: 3;
+  padding: 20px;
+}
+
+.lederbilde {
+
+}
+
+.oversikt_undergrupper_boks{
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 25px;
+  grid-template-rows: repeat(4,1fr);
+  grid-row-gap: 50px;
+  justify-content: center;
+}
+.undergrupper_boks{
+  grid-row: 1/3;
+  grid-column: 1/3;
+  border-radius: 1px;
+  border-color: black;
+  border-style: solid;
 }
