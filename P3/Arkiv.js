@@ -3,7 +3,7 @@
 var body = document.getElementById("arkiv_body"); //arkiv boddyen
 img_6=document.getElementById("6");
 img_6.addEventListener('click',function(){clicked(img_6)});
-arkiv_bilder=document.getElementById(""); 
+arkiv_bilder=document.getElementById("");
 
 function clicked(img_element){ //bytter clasene hoverable med img_in_focus etter om bildet er trykket
     console.log(  "clicked nr " + img_element);
@@ -31,7 +31,7 @@ function clicked(img_element){ //bytter clasene hoverable med img_in_focus etter
 
 function load() {
 	var mydata = JSON.parse(bilder);
-	alert(mydata[0]);
+	//alert(mydata[0]);
 
 
 
