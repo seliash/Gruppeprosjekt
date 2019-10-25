@@ -13,7 +13,8 @@ p {
 }
 
 .Arkiv_Bilder{
-  min-height: 10vh;
+  height: 20vh;
+
   display: grid;
   grid-template-rows: 0.15fr 1fr;
   grid-template-columns:0.1fr repeat(5,1fr) 0.1fr;
@@ -23,11 +24,13 @@ p {
 }
 .hoverable{ /* alle bilder i arkivet har denne*/
   width: 95%; /*Maks størrelse skal være grid størrelsen til Arkiv_Bilder*/
+  height: 95%;
   padding: 2.5%;
 }
 .hoverable:hover{
   width: 100%;
   max-width: 100%; /*Maks størrelse skal være grid størrelsen til Arkiv_Bilder*/
+  height: 100%;
   padding:0%;
 }
 .img_in_focus{ /* brukes for å få et bilde i fokus*/
@@ -86,15 +89,14 @@ height: 100%
 }
 .knapp_l{
     width: 40px;
-    height: 100%;
-    position: relative;
+        position: relative;
     left: 0px;
 
 
 }
 .knapp_r{
   width: 40px;
-  height: 100%;
+
   position: relative;
   left: 0px
 }
