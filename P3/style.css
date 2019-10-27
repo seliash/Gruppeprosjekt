@@ -77,10 +77,9 @@ height: 100%
   border-style: solid;*/
 }
 .banner{
-  position: absolute;
-  left: 0;
-  top: 80px;
-  width: 100%;
+  position: relative;
+  left: -13%;
+  min-width: 126%;
 }
 #hovedside_boks{
   display: grid;
