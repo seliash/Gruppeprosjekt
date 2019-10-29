@@ -94,8 +94,6 @@ function iterate(butn_node, dir){//ittererer album bilder i en retning TODO
 	pics=butn_node.parentNode;	//album noden
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
 //console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
-
-
 	if (dir=="l") {
 			pics.insertBefore(	pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
 		//ser om vi kan iterere videre, ellers wrapper den
@@ -146,22 +144,28 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 	    img_element.classList.remove("hoverable");
 	    //høyde=img_element.offsetHeight //får høyden til bildet inkludert padding i pixler.
 	    //console.log(høyde);
-	    console.log("arkivbody,høyde "+body.clientHeight)
-	    img_element.classList.add("img_in_focus");
-			//// TODO: fikse img in focus for tilfeldige store bilder.
-			// TODO: Fikse slik at høyre knappen kommer under bildet i fokus.
-	    høyde=img_element.offsetHeight;
-	    arkiv_høyde=body.clientHeight;
-	    console.log(høyde +"  "+ arkiv_høyde);
-	    img_element.style.paddingBottom=" calc(" + (arkiv_høyde - høyde) + "px) "
 
+	    img_element.classList.add("img_in_focus");
+		
+			// TODO: Fikse slik at høyre knappen kommer under bildet i fokus.
+			//setter paddinger:
+	    høyde=img_element.offsetHeight;
+			bredde=img_element.offsetWidth;
+	    arkiv_høyde=body.clientHeight;
+			arkiv_bredde=window.innerWidth;
+			img_element.style.paddingTop="10vh";
+	    img_element.style.paddingBottom=" calc(" + (arkiv_høyde - høyde) + "px) ";
+			img_element.style.paddingLeft= " calc(" + (arkiv_bredde - bredde)/2+ "px) ";
+			img_element.style.paddingRight=" calc(" + (arkiv_bredde - bredde)/2 + "px)";
 	}
 	else {
 	    console.log("deactivate");
 			/*
 	    img_element.classList.add("hoverable");
 	    img_element.classList.remove("img_in_focus");*/
+ 		img_element.style="";
 			img_element.className="hoverable";
-	    img_element.style.paddingBottom="0px";
+
+
 	}
 }
