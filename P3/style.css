@@ -13,13 +13,14 @@ p {
 }
 
 .Arkiv_Bilder{
-  height: 20vh;
 
   display: grid;
-  grid-template-rows: 0.15fr 1fr;
+  grid-template-rows: 30px 20vh;
   grid-template-columns:0.1fr repeat(5,1fr) 0.1fr;
-  grid-column-gap: 0px;
+  grid-column-gap: 3px;
   justify-content: center;
+  height: 20vh;
+  margin-bottom: 30px;
 
 }
 .hoverable{ /* alle bilder i arkivet har denne*/
