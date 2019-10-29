@@ -11,7 +11,7 @@ document.getElementsByTagName("html")[0].className = "html_shell"
 
 //Styling for body
 document.body.style.display = "grid"
-document.body.style.gridTemplate = "80px 1fr 10%/10% 1fr 10%"
+document.body.style.gridTemplate = "80px 1fr 10vh/10% 1fr 10%"
 document.body.style.minHeight = "100vh"
 document.body.style.margin = "0"
 
