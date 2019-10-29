@@ -19,10 +19,10 @@ function load() {
 	console.log(Albums);
 	construct_album(album);
 //test på innlastning
-//TODO: Fikse slik at footeren ikke blir mega lang ved dette tilfellet:
+/*
 	for (var i = 0; i < 50; i++) {
 		construct_album(album);
-	}
+	}*/
 }
 
 class Album {
