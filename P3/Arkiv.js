@@ -153,7 +153,7 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 	    arkiv_høyde=body.clientHeight;
 			arkiv_bredde=window.innerWidth;
 			img_element.style.paddingTop="10vh";
-	    img_element.style.paddingBottom=" calc(" + (arkiv_høyde - høyde) + "px) ";
+	    img_element.style.paddingBottom=" calc(" + (arkiv_høyde - høyde) + "px - 10vh) ";
 			img_element.style.paddingLeft= " calc(" + (arkiv_bredde - bredde)/2+ "px) ";
 			img_element.style.paddingRight=" calc(" + (arkiv_bredde - bredde)/2 + "px)";
 	}
