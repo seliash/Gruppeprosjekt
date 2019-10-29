@@ -20,9 +20,9 @@ function load() {
 	construct_album(album);
 //test på innlastning
 //TODO: Fikse slik at footeren ikke blir mega lang ved dette tilfellet:
-/*	for (var i = 0; i < 50; i++) {
+	for (var i = 0; i < 50; i++) {
 		construct_album(album);
-	}*/
+	}
 }
 
 class Album {
@@ -60,7 +60,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 //Oppretter venstre button
 	lft_butn=document.createElement("button");
 	album.album_node.appendChild(lft_butn);
-	lft_butn.className="knapp_l";
+	lft_butn.className="knapp";
 	lft_butn.appendChild(document.createTextNode("left"))
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
@@ -79,7 +79,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	// Oppretter høyre button
 	rgt_butn=document.createElement("button");
 	album.album_node.appendChild(rgt_butn);
-	rgt_butn.className="knapp_r";
+	rgt_butn.className="knapp";
 	rgt_butn.appendChild(document.createTextNode("right"));//legger til teksten left til knappen
 	//legger til EventListenere for de to knappene.
 	lft_butn.addEventListener('click',function(e){iterate(e.target,'l')})
@@ -90,7 +90,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 }
 
 
-function iterate(butn_node, dir){//ittererer album bilder i en retning TODO
+function iterate(butn_node, dir){
 	pics=butn_node.parentNode;	//album noden
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
 //console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
@@ -146,8 +146,7 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 	    //console.log(høyde);
 
 	    img_element.classList.add("img_in_focus");
-		
-			// TODO: Fikse slik at høyre knappen kommer under bildet i fokus.
+
 			//setter paddinger:
 	    høyde=img_element.offsetHeight;
 			bredde=img_element.offsetWidth;
