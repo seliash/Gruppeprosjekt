@@ -20,7 +20,7 @@ function load() {
 	construct_album(album);
 //test på innlastning
 //TODO: Fikse slik at footeren ikke blir mega lang ved dette tilfellet:
-	/*for (var i = 0; i < 50; i++) {
+/*	for (var i = 0; i < 50; i++) {
 		construct_album(album);
 	}*/
 }
@@ -56,16 +56,29 @@ function construct_album(album){//skal injektere hele albummet i HTML
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 5
+
+	; i++) {
 	im=document.createElement("img");
 	im.src= "https://drive.google.com/uc?id="+ album.images[i] ;
 	im.className= "hoverable";
 	im.alt="arkiv bilde";
 	im.id=album.images[i];
+	console.log("giv event listn:"+album.images[i]);
+
 
 	album.album_node.appendChild(im);
-}
+	// legger til EventListener e er musepekeren, e.target er det den trykker på, altså bildet.
+im.addEventListener('click',function(e){ clicked(e.target.id)});
 
+}
+console.log(i);
+for (var i = 0; i < 10; i++) {
+	console.log(album.images[i]);
+}
+console.log(i);
+	/*img_6=document.getElementById("6");
+img_6.addEventListener('click',function(){clicked(img_6)});
 
 // Oppretter høyre button
 rgt_butn=document.createElement("button");
@@ -116,8 +129,10 @@ function iterate_l(){iterate("l")}
 function iterate_r() { iterate("r")}
 
 
-function clicked(img_element){ //bytter clasene hoverable med img_in_focus etter om bildet er trykket
-    console.log(  "clicked nr " + img_element);
+function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om bildet er trykket
+		img_element=document.getElementById(img_id);
+		console.log(  "clicked nr " + img_element);
+		console.log(img_element.className);
 	if (img_element.className=="hoverable") //ustabil knapp funksjon, men men
 	{
 	    console.log("activate");
@@ -134,8 +149,10 @@ function clicked(img_element){ //bytter clasene hoverable med img_in_focus etter
 	}
 	else {
 	    console.log("deactivate");
+			/*
 	    img_element.classList.add("hoverable");
-	    img_element.classList.remove("img_in_focus");
+	    img_element.classList.remove("img_in_focus");*/
+			img_element.className="hoverable";
 	    img_element.style.paddingBottom="0px";
 	}
 }
