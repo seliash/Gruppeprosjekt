@@ -30,8 +30,8 @@ class Album {
 
 		this.album_id=album_id
 		this.images=img_data
-		this.img_l=1
-		this.img_r=5
+		this.img_l=-1
+		this.img_r=5//pekere til neste bilde
 		this.album_node=null
 	}
 }
@@ -52,22 +52,16 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	album.album_node=document.createElement("div");
 	album.album_node.id=album.album_id;
 	album.album_node.className="Arkiv_Bilder";
-
-
 //Oppretter h2-elementet
 	h2=document.createElement("h2")
 	h2.className="arkiv_title";
 	h2.appendChild(document.createTextNode(album.album_id)); //legger til teksten inne i h2
 	album.album_node.appendChild(h2); //legger til h2 i albummet.
-
 //Oppretter venstre button
 	lft_butn=document.createElement("button");
 	album.album_node.appendChild(lft_butn);
 	lft_butn.className="knapp_l";
 	lft_butn.appendChild(document.createTextNode("left"))
-
-//	lft_butn.outerHTML= "<button class="+'"'+"knapp_l"+'"'+" onclick="+'"'+"iterate_l()"+'"'+"> Left </button>"
-
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
@@ -87,12 +81,9 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	album.album_node.appendChild(rgt_butn);
 	rgt_butn.className="knapp_r";
 	rgt_butn.appendChild(document.createTextNode("right"));//legger til teksten left til knappen
-
-
 	//legger til EventListenere for de to knappene.
 	lft_butn.addEventListener('click',function(e){iterate(e.target,'l')})
 	rgt_butn.addEventListener('click',function(e){iterate(e.target,'r')})
-
 	//legger inn albumet i arkivet:
 	body.appendChild(album.album_node);
 
@@ -100,42 +91,50 @@ function construct_album(album){//skal injektere hele albummet i HTML
 
 
 function iterate(butn_node, dir){//ittererer album bilder i en retning TODO
-	console.log(butn_node, dir);
 	pics=butn_node.parentNode;	//album noden
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
-	console.log(album);
+//console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 
 
-	//super crude "itterasjon" igjennom bildene, sjekker ikke om man er på kanten av bildene.
 	if (dir=="l") {
-		console.log("l");
-		pics.insertBefore(	pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
-
-	//setter så bildet til venstre til å være det nye bildet.
-		newId=album_data.images[album_data.img_l-1];
+			pics.insertBefore(	pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
+		//ser om vi kan iterere videre, ellers wrapper den
+		if (album_data.img_l==-1) {
+			console.log("wrapper img_l");
+			album_data.img_l=album_data.images.length-1
+		}
+		//setter så bildet til venstre til å være det nye bildet.
+		newId=album_data.images[album_data.img_l];
 		pics.childNodes[1+1].src=addDriveSrc(newId);
 		pics.childNodes[1+1].id=newId;
-
 		//oppdaterer hvor bildepekerne står
-			album_data.img_r-=1;
-			album_data.img_l-=1;
+		album_data.img_r-=1;
+		album_data.img_l-=1;
+		// wraper img_r
+		if (album_data.img_r==-1) {
+				album_data.img_r=album_data.images.length-1;
+		}
 	}
 	else if (dir="r") {
-		console.log("r");
 		pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
+		//ser om vi kan iterere videre, ellers wrapper den
+		if (album_data.img_r==album_data.images.length) {
+			album_data.img_r=0;
+		}
 //setter så bildet til høyre til å være det nye bildet:
-		newId=album_data.images[album_data.img_r+1];
+		newId=album_data.images[album_data.img_r];
 		pics.childNodes[1+5].src=addDriveSrc(newId);
 		pics.childNodes[1+5].id=newId;
-//oppdaterer hvor bildepekerne står
-	album_data.img_r+=1;
-	album_data.img_l+=1;
-	}
+	//oppdaterer hvor bildepekerne står
+		album_data.img_r+=1;
+		album_data.img_l+=1;
+		if (album_data.img_l==album_data.images.length) {
+			album_data.img_l=0;
+		}
+		}
+	//console.log( "nye pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 }
-/*
-function iterate_l(){iterate("l")}
-function iterate_r() { iterate("r")}
-*/
+
 
 function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om bildet er trykket
 		img_element=document.getElementById(img_id);
