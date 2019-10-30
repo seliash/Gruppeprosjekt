@@ -13,6 +13,10 @@ p {
   color: #333333;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .Arkiv_Bilder{
 
   display: grid;
