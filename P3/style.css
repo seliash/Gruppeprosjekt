@@ -212,3 +212,13 @@ height: 100%
   display: block;
   text-align: left;
 }
+
+.footer_element p a:link, a:visited{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer_element p a:hover{
+  text-decoration: underline;
+}
