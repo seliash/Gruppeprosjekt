@@ -1,40 +1,43 @@
 var Albums=[];
-
 var body = document.getElementById("arkiv_body"); //arkiv boddyen
-
 /*img_6=document.getElementById("6");
 img_6.addEventListener('click',function(){clicked(img_6)});
 */
-
 arkiv_bilder=document.getElementById("");
 
-
-
-
 function load() {
-	var mydata = JSON.parse(bilder);
-	album=new Album("revy_id",mydata)
+	console.log(bilder);
+	console.log(bilder.Albums[1]);
+	mydata = JSON.parse(bilder);
+console.log(mydata);
+/*
+	album=new Album("revy_id","en",mydata)
+	console.log(album);
 	Albums.push(album);
+	album=new Album("revy_TO", "to",mydata)
+		Albums.push(album);
+	console.log(JSON.stringify(Albums));
 
 	console.log(Albums);
 	construct_album(album);
 //test på innlastning
-/*
+
 	for (var i = 0; i < 50; i++) {
 		construct_album(album);
 	}*/
 }
 
 class Album {
-	constructor(album_id,img_data) {
-
+	constructor(album_id,album_title,img_data) {
 		this.album_id=album_id
+		this.album_title=album_title
 		this.images=img_data
 		this.img_l=-1
 		this.img_r=5//pekere til neste bilde
 		this.album_node=null
 	}
 }
+
 
 function getAlbum(album_id){
 	for (var i = 0; i < Albums.length; i++) {
@@ -43,6 +46,7 @@ function getAlbum(album_id){
 		}
 	}
 }
+
 function addDriveSrc(driveID) {
  return "https://drive.google.com/uc?id="+ driveID
 }
@@ -164,7 +168,5 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 	    img_element.classList.remove("img_in_focus");*/
  		img_element.style="";
 			img_element.className="hoverable";
-
-
 	}
 }
