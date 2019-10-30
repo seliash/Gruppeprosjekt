@@ -128,7 +128,8 @@ undergrupper.firstChild.innerText = "Undergrupper"
 undergrupper.appendChild(undergrupper_dropdown)
 arkiv.firstChild.href = "Arkiv.html"
 arkiv.firstChild.innerText = "Arkiv"
-påmelding.firstChild.href = "link.asp" //--Denne må endres!
+påmelding.firstChild.href = "https://docs.google.com/forms/d/e/1FAIpQLSeskn70ldpsOhrC71ehc9mKVIHHxpKQwQsjKTQEpHXSUcUXnw/viewform?usp=sf_link" //--Denne må endres!
+påmelding.firstChild.target="blank"
 påmelding.firstChild.innerText = "Påmelding"
 billetter.firstChild.href = "Billettsalg.html"
 billetter.firstChild.innerText = "Billetter"
