@@ -13,7 +13,7 @@ document.getElementsByTagName("html")[0].className = "html_shell"
 
 //Styling for body
 document.body.style.display = "grid"
-document.body.style.gridTemplate = "80px 1fr 10%/10% 1fr 10%"
+document.body.style.gridTemplate = "80px 1fr 10vh/10% 1fr 10%"
 document.body.style.minHeight = "100vh"
 document.body.style.margin = "0"
 
@@ -132,12 +132,13 @@ påmelding.appendChild(document.createElement("a"))
 billetter.appendChild(document.createElement("a"))
 om_oss.firstChild.href = "Om_oss.html"
 om_oss.firstChild.innerText = "Om oss"
-undergrupper.firstChild.href = "link.asp" //--Denne må endres!
+undergrupper.firstChild.href = "Oversikt_undergrupper.html" //--Denne må endres!
 undergrupper.firstChild.innerText = "Undergrupper"
 undergrupper.appendChild(undergrupper_dropdown)
 arkiv.firstChild.href = "Arkiv.html"
 arkiv.firstChild.innerText = "Arkiv"
-påmelding.firstChild.href = "link.asp" //--Denne må endres!
+påmelding.firstChild.href = "https://docs.google.com/forms/d/e/1FAIpQLSeskn70ldpsOhrC71ehc9mKVIHHxpKQwQsjKTQEpHXSUcUXnw/viewform?usp=sf_link" //--Denne må endres!
+påmelding.firstChild.target="blank"
 påmelding.firstChild.innerText = "Påmelding"
 billetter.firstChild.href = "Billettsalg.html"
 billetter.firstChild.innerText = "Billetter"
