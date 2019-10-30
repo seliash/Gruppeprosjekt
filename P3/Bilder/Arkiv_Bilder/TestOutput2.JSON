@@ -1,0 +1,16 @@
+bilder =
+{
+  "Albums": [
+    {
+      "album_id": "A_id_1",
+      "album_title": "Album_1",
+        "images": ["en","to"]
+    },
+    {
+        "album_id": "A_id_1",
+      "album_title": "Album_2 ",
+        "images": ["en","to"]
+    }
+  ],
+
+}
