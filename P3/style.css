@@ -111,6 +111,7 @@ height: 100%
   border-radius: 2px;
   border-color: red;
   border-style: solid;
+  padding-left: 20px;
 }
 .tekst_boks{
   grid-row: 2/3;
@@ -118,6 +119,7 @@ height: 100%
   border-radius: 1px;
   border-color: black;
   border-style: solid;
+  padding: 20px;
 }
 #festet{
  grid-column: 3;
@@ -169,10 +171,6 @@ height: 100%
 .gruppeleder {
   grid-column: 3;
   padding: 20px;
-}
-
-.lederbilde {
-
 }
 
 .oversikt_undergrupper_boks{
