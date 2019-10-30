@@ -2,14 +2,25 @@
 <html lang="en" dir="ltr" class="html_shell">
   <head>
     <meta charset="utf-8">
-    <title>Hovedside-Naborevyen</title>
+    <title>Hovedside - Naborevyen</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="entire_page">
     <div class="center_element">
 
       <div class="banner_element">
-        <img class="banner" src="Bilder/Bannere/IMG_2232.JPG" alt="banner">
+        <img class="banner slides fade" src="Bilder/Bannere/IMG_2232.JPG" alt="banner">
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
       </div>
 
       <div id="hovedside_boks">
