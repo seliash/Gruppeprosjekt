@@ -123,7 +123,7 @@ påmelding.appendChild(document.createElement("a"))
 billetter.appendChild(document.createElement("a"))
 om_oss.firstChild.href = "Om_oss.html"
 om_oss.firstChild.innerText = "Om oss"
-undergrupper.firstChild.href = "link.asp" //--Denne må endres!
+undergrupper.firstChild.href = "Oversikt_undergrupper.html" //--Denne må endres!
 undergrupper.firstChild.innerText = "Undergrupper"
 undergrupper.appendChild(undergrupper_dropdown)
 arkiv.firstChild.href = "Arkiv.html"
