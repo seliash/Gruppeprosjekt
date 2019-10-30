@@ -5,19 +5,24 @@
     <link rel="stylesheet" href="style.css">
     <title> Arkiv - Naborevyen</title>
   </head>
-  <body onpageshow="load()">
+  <body>
     <div class="center_element" id="arkiv_body">
-      <div class="Arkiv_Bilder" id="Revy???">
+    <!--
+      <div class="Arkiv_Bilder" id="revy_id">
         <h2 class="arkiv_title" >Revy ??? </h2>
-        <img  src= "./Bilder/Arkiv_Bilder/IMG_1801.JPG" alt="Arkiv" id="16">
-        <img  src= "./Bilder/Arkiv_Bilder/IMG_1870.JPG" alt="Arkiv" id="17">
-        <img  src= "./Bilder/Arkiv_Bilder/IMG_1876.JPG" alt="Arkiv" id="18">
-        <img  src= "./Bilder/Arkiv_Bilder/IMG_1899.JPG" alt="Arkiv" id="19">
-        <img  src= "./Bilder/Arkiv_Bilder/IMG_1918.JPG" alt="Arkiv" id="20">
+        <button class="knapp_l" onclick="iterate_l()"> Left </button>
+
+        <img  src= "./Bilder/Arkiv_Bilder/IMG_1801.JPG" class="hoverable" alt="Arkiv" id="16">
+        <img  src= "./Bilder/Arkiv_Bilder/IMG_1870.JPG" class="hoverable" alt="Arkiv" id="17">
+        <img  src= "./Bilder/Arkiv_Bilder/IMG_1876.JPG" class="hoverable" alt="Arkiv" id="18">
+        <img  src= "./Bilder/Arkiv_Bilder/IMG_1899.JPG" class="hoverable" alt="Arkiv" id="19">
+        <img  src= "./Bilder/Arkiv_Bilder/IMG_1918.JPG" class="hoverable" alt="Arkiv" id="20">
+        <button class="knapp_r" onclick="iterate_r()"> Right </button>
+
       </div>
 
       <div class="arkiv_video_omrade">
-        <h1 class="arkiv_title_3">Filmer av revyene</h1>
+        <h1 class="arkiv_title">Filmer av revyene</h1>
         <iframe id="video_1" class="arkiv_video" src="https://www.youtube.com/embed?listType=playlist&list=PLgQnlEqLQbHEX0eKT3Qh0cW_2ZTkLbKdL"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe id="video_2" class="arkiv_video" src="https://youtube.com/embed?listType=playlist&list=PLgQnlEqLQbHEfkoxy2eTL_Dqh55RgkOND"
@@ -52,10 +57,11 @@
         <img  src= "./Bilder/Arkiv_Bilder/IMG_1899.JPG" alt="Arkiv" id="14">
         <img  src= "./Bilder/Arkiv_Bilder/IMG_1918.JPG" alt="Arkiv" id="15">
       </div>
+    -->
     </div>
     <script src="Website_shell.js" type="text/javascript"></script>
     <script src="Arkiv.js" type="text/javascript"> </script>
-    <script type="text/javascript" src="./Bilder/Arkiv_Bilder/TextOutput.txt"></script>
+    <script type="text/javascript" src="./Bilder/Arkiv_Bilder/TextOutput.txt" onload="load()"></script>
 
   </body>
 </html>
