@@ -1,8 +1,57 @@
+body{
+  display: grid;
+  grid-template: 80px 1fr 10vh/10% 1fr 10%;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .html_shell{
   height: 100%;
 }
 
-.navbar{
+.center_element{
+  display: flex;
+  grid-area: 2/2/3/3;
+  flex-direction: column;
+}
+
+.header_footer_class{
+  background-color: #a01405;
+  color: #ffce46;
+  display: flex;
+}
+
+#logo_image{
+  max-height: 80px;
+}
+
+#header_element{
+  grid-area: 1/2/2/3;
+  justify-content: space-between;
+}
+
+#left_header_element{
+  grid-area: 1/1/2/2;
+}
+
+#right_header_element{
+  grid-area: 1/3/2/4;
+}
+
+#footer_element{
+    justify-content: space-around;
+    grid-area: 3/2/4/3;
+}
+
+#left_footer_element{
+  grid-area: 3/1/4/2;
+}
+
+#right_footer_element{
+  grid-area: 3/3/4/4;
+}
+
+#navbar{
   display: block;
   list-style-type: none;
   margin: 0;
@@ -10,24 +59,26 @@
   overflow: hidden;
 }
 
-.navbar li{
+#navbar li{
   float: left;
   height: 80px;
 }
 
-.navbar li a{
+#navbar li a{
   display: flex;
   align-items: center;
   color: #ffce46;
   text-decoration: none;
-  padding: 0 15px 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #a01405;
   height: 100%;
   font-size: 1.3em;
 }
 
-.navbar li a:hover{
+#navbar li a:hover{
   background-color: #821308;
+  color: inherit;
 }
 
 .dropdown_btn:hover #undergrupper_dropdown{
@@ -48,12 +99,13 @@
   text-align: left;
 }
 
-.footer_element p a:link, a:visited{
+#footer_element p a:link, a:visited{
   color: black;
+  background-color: inherit;
   font-weight: bold;
   text-decoration: none;
 }
 
-.footer_element p a:hover{
+#footer_element p a:hover{
   text-decoration: underline;
 }
