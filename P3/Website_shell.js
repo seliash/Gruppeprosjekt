@@ -112,43 +112,47 @@ else { //Desktop
     //undergrupper
     let styret = document.createElement("a")
     styret.innerText = "Styret"
-    styret.href = "Undergrupper/Styret.html"
+    styret.href = "Styret.html"
     undergrupper_dropdown.appendChild(styret)
     let bygg = document.createElement("a")
     bygg.innerText = "Bygg"
-    bygg.href = "Undergrupper/Bygg.html"
+    bygg.href = "Bygg.html"
     undergrupper_dropdown.appendChild(bygg)
     let dans = document.createElement("a")
     dans.innerText = "Dans"
-    dans.href = "Undergrupper/Dans.html"
+    dans.href = "Dans.html"
     undergrupper_dropdown.appendChild(dans)
     let kostymeOgRek = document.createElement("a")
     kostymeOgRek.innerText = "Kostyme og rekvisitta"
-    kostymeOgRek.href = "Undergrupper/Kostyme_og_rekvisitter.html"
+    kostymeOgRek.href = "Kostyme_og_rekvisitter.html"
     undergrupper_dropdown.appendChild(kostymeOgRek)
     let musikk = document.createElement("a")
     musikk.innerText = "Musikk"
-    musikk.href = "Undergrupper/Musikk.html"
+    musikk.href = "Musikk.html"
     undergrupper_dropdown.appendChild(musikk)
     let økonomi = document.createElement("a")
     økonomi.innerText = "Økonomi"
-    økonomi.href = "Undergrupper/Økonomi.html"
+    økonomi.href = "Økonomi.html"
     undergrupper_dropdown.appendChild(økonomi)
     let prDesign = document.createElement("a")
     prDesign.innerText = "PR og design"
-    prDesign.href = "Undergrupper/PR_og_design.html"
+    prDesign.href = "PR_og_design.html"
     undergrupper_dropdown.appendChild(prDesign)
     let skribent = document.createElement("a")
     skribent.innerText = "Skribent"
-    skribent.href = "Undergrupper/Skribent.html"
+    skribent.href = "Skribent.html"
     undergrupper_dropdown.appendChild(skribent)
+    let skuespillere = document.createElement("a")
+    skuespillere.innerText = "Skuespillere"
+    skuespillere.href = "Skuespill.html"
+    undergrupper_dropdown.appendChild(skuespillere)
     let teknikk = document.createElement("a")
     teknikk.innerText = "Teknikk"
-    teknikk.href = "Undergrupper/Teknikk.html"
+    teknikk.href = "Teknikk.html"
     undergrupper_dropdown.appendChild(teknikk)
     let velferd = document.createElement("a")
     velferd.innerText = "Velferd"
-    velferd.href = "Undergrupper/Velferd.html"
+    velferd.href = "Velferd.html"
     undergrupper_dropdown.appendChild(velferd)
 
     //Navbar
