@@ -127,6 +127,7 @@ height: 100%
 .gruppeboks {
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 120vh;
 }
 
 .gruppetekst {
@@ -134,9 +135,20 @@ height: 100%
   padding: 20px;
 }
 
+.gruppetekst h1, .gruppeleder h2{
+  padding-bottom: 7px;
+  border-bottom: 1px solid black;
+}
+
 .gruppeleder {
   grid-column: 3;
   padding: 20px;
+
+}
+
+.lederbilde{
+  padding: 0 20% 0 20%;
+  width: 60%;
 }
 
 .oversikt_undergrupper_boks{
