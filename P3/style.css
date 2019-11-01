@@ -234,3 +234,7 @@ height: 100%
   from {opacity: .4}
   to {opacity: 1}
 }
+
+#ticketcoIframe{
+  overflow-x: hidden;
+}
