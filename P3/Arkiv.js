@@ -7,10 +7,13 @@ arkiv_bilder=document.getElementById("");
 
 function load() {
 	console.log(bilder);
-	console.log(bilder.Albums[1]);
-	mydata = JSON.parse(bilder);
-console.log(mydata);
-/*
+	console.log(bilder);
+	mydata=JSON.parse(bilder);
+	//console.log(bilder.Albums[bilder]);
+	//mydata = JSON.parse(bilder);
+//console.log(mydata);
+
+
 	album=new Album("revy_id","en",mydata)
 	console.log(album);
 	Albums.push(album);
@@ -18,13 +21,25 @@ console.log(mydata);
 		Albums.push(album);
 	console.log(JSON.stringify(Albums));
 
+	/*for (var album  of bilder){
+
+	}
+for (var i = 0; i < bilder.length; i++) {
+	album=bilder[i][0];
+	console.log(album.album_id,album.album_title,album.images);
+	a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+	Albums.push(a)
+
+}*/
+
 	console.log(Albums);
 	construct_album(album);
+
 //test på innlastning
 
 	for (var i = 0; i < 50; i++) {
 		construct_album(album);
-	}*/
+	}
 }
 
 class Album {
