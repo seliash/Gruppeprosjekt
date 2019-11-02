@@ -6,10 +6,14 @@ img_6.addEventListener('click',function(){clicked(img_6)});
 arkiv_bilder=document.getElementById("");
 
 function load() {
-	console.log(bilder);
-	console.log(bilder.Albums[1]);
-	mydata = JSON.parse(bilder);
-console.log(mydata);
+	//console.log(bilder);
+	//console.log(bilder);
+	//mydata=JSON.parse(bilder);
+	mydata = JSON.parse(JSON.stringify(bilder));
+	//console.log(bilder.Albums[bilder]);
+	//mydata = JSON.parse(bilder);
+//console.log(mydata);
+
 /*
 	album=new Album("revy_id","en",mydata)
 	console.log(album);
@@ -17,14 +21,24 @@ console.log(mydata);
 	album=new Album("revy_TO", "to",mydata)
 		Albums.push(album);
 	console.log(JSON.stringify(Albums));
+*/
+
+for (var i = 0; i < mydata.Albums.length; i++) {
+	//console.log(mydata.Albums[i].images);
+	album=bilder.Albums[i];
+	//console.log(album);
+	//console.log(album.album_id,album.album_title,album.images);
+	a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+	console.log(a);
+	Albums.push(a)
+	construct_album(album);
+}
 
 	console.log(Albums);
-	construct_album(album);
+	//construct_album(album);
+
 //test på innlastning
 
-	for (var i = 0; i < 50; i++) {
-		construct_album(album);
-	}*/
 }
 
 class Album {
@@ -59,13 +73,16 @@ function construct_album(album){//skal injektere hele albummet i HTML
 //Oppretter h2-elementet
 	h2=document.createElement("h2")
 	h2.className="arkiv_title";
-	h2.appendChild(document.createTextNode(album.album_id)); //legger til teksten inne i h2
+	h2.innerHTML=album.album_title; //legger til teksten inne i h2
 	album.album_node.appendChild(h2); //legger til h2 i albummet.
 //Oppretter venstre button
 	lft_butn=document.createElement("button");
 	album.album_node.appendChild(lft_butn);
 	lft_butn.className="knapp";
-	lft_butn.appendChild(document.createTextNode("left"))
+	p_element=document.createElement("P");
+	p_element.innerHTML='\u276E';
+	lft_butn.appendChild(p_element)
+
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
@@ -84,28 +101,33 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	rgt_butn=document.createElement("button");
 	album.album_node.appendChild(rgt_butn);
 	rgt_butn.className="knapp";
-	rgt_butn.appendChild(document.createTextNode("right"));//legger til teksten left til knappen
+	p_element=document.createElement("P");
+	p_element.innerHTML='\u276F';
+	rgt_butn.appendChild(p_element)//legger til teksten left til knappen
 	//legger til EventListenere for de to knappene.
 	lft_butn.addEventListener('click',function(e){iterate(e.target,'l')})
 	rgt_butn.addEventListener('click',function(e){iterate(e.target,'r')})
 	//legger inn albumet i arkivet:
-	body.appendChild(album.album_node);
+	document.getElementById("arkiv_Bilder").appendChild(album.album_node);
 
 }
 
 
 function iterate(butn_node, dir){
+//console.log(butn_node.className);
 	pics=butn_node.parentNode;	//album noden
+	if (butn_node.className=="") {//om man trykker akkurat på teksten
+		pics=pics.parentNode
+	}
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
 //console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 	if (dir=="l") {
-			pics.insertBefore(	pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
-		//ser om vi kan iterere videre, ellers wrapper den
+		pics.insertBefore(pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
+			//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_l==-1) {
-			console.log("wrapper img_l");
 			album_data.img_l=album_data.images.length-1
 		}
-		//setter så bildet til venstre til å være det nye bildet.
+			//setter så bildet til venstre til å være det nye bildet.
 		newId=album_data.images[album_data.img_l];
 		pics.childNodes[1+1].src=addDriveSrc(newId);
 		pics.childNodes[1+1].id=newId;
@@ -118,8 +140,8 @@ function iterate(butn_node, dir){
 		}
 	}
 	else if (dir="r") {
-		pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
-		//ser om vi kan iterere videre, ellers wrapper den
+	pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
+	//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_r==album_data.images.length) {
 			album_data.img_r=0;
 		}

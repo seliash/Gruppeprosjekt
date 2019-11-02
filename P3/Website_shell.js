@@ -154,6 +154,10 @@ else { //Desktop
     skribent.innerText = "Skribent"
     skribent.href = "Skribent.html"
     undergrupper_dropdown.appendChild(skribent)
+    let skuespillere = document.createElement("a")
+    skuespillere.innerText = "Skuespillere"
+    skuespillere.href = "Skuespill.html"
+    undergrupper_dropdown.appendChild(skuespillere)
     let teknikk = document.createElement("a")
     teknikk.innerText = "Teknikk"
     teknikk.href = "Teknikk.html"
