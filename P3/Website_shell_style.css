@@ -1,111 +1,170 @@
 body{
   display: grid;
-  grid-template: 80px 1fr 10vh/10% 1fr 10%;
+  grid-template: 80px 1fr 80px/10% 1fr 10%;
   min-height: 100vh;
   margin: 0;
 }
 
+/*Setter høyden til siden*/
 .html_shell{
   height: 100%;
 }
 
+/*Definerer elementet hvor det skal legges inn innhold på alle sidene*/
 .center_element{
   display: flex;
   grid-area: 2/2/3/3;
   flex-direction: column;
 }
 
+/*Definerer fargen og tekstfargen på header og footer*/
 .header_footer_class{
   background-color: #a01405;
   color: #ffce46;
   display: flex;
 }
 
+/*Setter max-høyden til logoen lik høyden til navbaren*/
 #logo_image{
   max-height: 80px;
 }
 
-#header_element{
-  grid-area: 1/2/2/3;
-  justify-content: space-between;
+/*Definerer hvor headeren er på desktop*/
+@media only screen and (min-width: 900px) {
+  #header_element{
+    grid-area: 1/2/2/3;
+    justify-content: space-between;
+  }
+  #left_header_element{grid-area: 1/1/2/2;}
+  #right_header_element{grid-area: 1/3/2/4;}
 }
 
-#left_header_element{
-  grid-area: 1/1/2/2;
+/*Definerer hvor headeren er på mobile*/
+@media only screen and (max-width: 900px) {
+  #header_element{
+    grid-area: 1/1/2/4;
+  }
 }
 
-#right_header_element{
-  grid-area: 1/3/2/4;
-}
-
+/*Definerer hvor footeren er*/
 #footer_element{
-    justify-content: space-around;
-    grid-area: 3/2/4/3;
+  justify-content: space-around;
+  grid-area: 3/2/4/3;
+}
+#left_footer_element{grid-area: 3/1/4/2;}
+#right_footer_element{grid-area: 3/3/4/4;}
+
+/*Setter knappene på toppen til en block og fjerner styling*/
+@media only screen and (min-width: 900px) {
+  #navbar{
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-#left_footer_element{
-  grid-area: 3/1/4/2;
+/*Setter høyden til blokken til knappene*/
+@media only screen and (min-width: 900px) {
+  #navbar li{
+    float: left;
+    height: 80px;
+  }
 }
 
-#right_footer_element{
-  grid-area: 3/3/4/4;
+
+@media only screen and (min-width: 900px) {
+  /*Styling for knappene i headeren, desktop*/
+  #navbar li a{
+    display: flex;
+    align-items: center;
+    color: #ffce46;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #a01405;
+    height: 100%;
+    font-size: 1.3em;
+  }
+
+  /*Styling for hovering over knappene*/
+  #navbar li a:hover{
+    background-color: #821308;
+    color: inherit;
+  }
+
+  /*Viser undergruppene når du hoverer over undergrupper-knappen*/
+  .dropdown_btn:hover #undergrupper_dropdown{
+    display: block;
+  }
+
+  /*Setter undergruppene til skjult som standard og definerer styling*/
+  #undergrupper_dropdown{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  #undergrupper_dropdown a{
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
 }
 
-#navbar{
-  display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-#navbar li{
-  float: left;
+/*Setter høyden til hamburgerbildet for mobil*/
+#hamburger_image{
   height: 80px;
 }
 
-#navbar li a{
-  display: flex;
-  align-items: center;
-  color: #ffce46;
-  text-decoration: none;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #a01405;
+@media only screen and (max-width: 900px) {
+  #header_element{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*Viser og skjuler linker til sider*/
+  #hamburger_dropdown.clicked{display: block;}
+  #hamburger_dropdown.unclicked{display: none;}
+
+  #hamburger_dropdown{
+    position: absolute;
+    right: 0px;
+  }
+
+  #hamburger_dropdown a{
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #a01405;
+    color: #ffce46;
+    font-size: 1.3em;
+  }
+}
+
+/*Styling for knappene i headeren, mobile*/
+#header_element div a{
   height: 100%;
-  font-size: 1.3em;
 }
 
-#navbar li a:hover{
-  background-color: #821308;
-  color: inherit;
-}
 
-.dropdown_btn:hover #undergrupper_dropdown{
-  display: block;
-}
 
-#undergrupper_dropdown{
+/*MOBIL: Setter navigasjonsknappene til skjult som standard og definerer styling*/
+#hamburger_dropdown{
   display: none;
   position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   z-index: 1;
 }
 
-#undergrupper_dropdown a{
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
+/*Styling for linkene i footeren*/
 #footer_element p a:link, a:visited{
   color: black;
   background-color: inherit;
   font-weight: bold;
   text-decoration: none;
 }
-
 #footer_element p a:hover{
   text-decoration: underline;
 }

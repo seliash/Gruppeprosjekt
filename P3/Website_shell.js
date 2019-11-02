@@ -23,6 +23,7 @@ document.getElementsByTagName("html")[0].className = "html_shell"
 logo_wrapper = document.createElement("a")
 logo_wrapper.appendChild(logo_image)
 logo_wrapper.href = "Hovedside.html"
+logo_wrapper.id = "logo_image_wrapper"
 logo_image.src = "../P3/Bilder/Logoer/Naborevyen_logo_cropped.png"
 logo_image.alt = " "//Denne skal linke tilbake til hovedsiden, så den skal ikke ha noe navn
 logo_image.id = "logo_image"
@@ -34,48 +35,59 @@ footer_element.childNodes[0].innerHTML = "Kontakt Naborevyen: <br> <a href=\"mai
 footer_element.appendChild(document.createElement("p"))
 footer_element.childNodes[1].innerHTML = "Facebook: <br> <a href=\"https://www.facebook.com/naborevyen\" target=\"_blank\">facebook.com/naborevyen</a>"
 
+//Header
 var mq = window.matchMedia("(max-width: 900px)");
 if (mq.matches) { //Mobile
-    //Load an icon library to show a hamburger menu (bars) on small screens
-    let mobile_style_sheet = documnet.createElement("link")
-    mobile_style_sheet.rel = "stylesheet"
-    mobile_style_sheet.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    document.getElementsByTagName("head")[0].appendChild(mobile_style_sheet)
 
-    let navbar = document.createElement("div")
-    navbar.id = "navbar"
-    let om_oss = document.createElemenet("a")
+    //Henter og definerer bilde til bruk i mobilmeny
+    let hamburger_image = document.createElement("img")
+    hamburger_image.src = "Bilder/iconfinder_menu-alt_134216.svg"
+    hamburger_image.alt = " "//Denne skal bare vise linker til andre sider
+    hamburger_image.id = "hamburger_image"
+
+    //Lager struktur for mobilmeny
+    let hamburger_wrapper = document.createElement("div")
+    let hamburger_button = document.createElement("a")
+    let hamburger_dropdown = document.createElement("div")
+    hamburger_dropdown.className = "unclicked"
+    hamburger_button.href = "javascript:void(0);"
+    hamburger_button.addEventListener("click", showNavigation)
+    header_element.appendChild(hamburger_wrapper)
+    hamburger_wrapper.appendChild(hamburger_button)
+    hamburger_button.appendChild(hamburger_image)
+    hamburger_wrapper.appendChild(hamburger_dropdown)
+    hamburger_dropdown.id = "hamburger_dropdown"
+
+    let om_oss = document.createElement("a")
     om_oss.href = "Om_oss.html"
     om_oss.innerText = "Om oss"
-    navbar.appendChild(om_oss)
-    let undergrupper = document.createElement("div")
+    hamburger_dropdown.appendChild(om_oss)
+    let undergrupper = document.createElement("a")
     undergrupper.href = "Oversikt_undergrupper.html"
     undergrupper.innerText = "Undergrupper"
-    undergrupper.id = "undergrupperID"
-    undergrupper.className = "dropdown_btn"
-    navbar.appendChild(undergrupper)
+    hamburger_dropdown.appendChild(undergrupper)
     let arkiv = document.createElement("a")
     arkiv.href = "Arkiv.html"
     arkiv.innerText = "Arkiv"
-    navbar.appendChild(arkiv)
+    hamburger_dropdown.appendChild(arkiv)
     let påmelding = document.createElement("a")
     påmelding.href = "https://docs.google.com/forms/d/e/1FAIpQLSeskn70ldpsOhrC71ehc9mKVIHHxpKQwQsjKTQEpHXSUcUXnw/viewform?usp=sf_link"
     påmelding.target = "_blank"
     påmelding.innerText = "Påmelding"
-    navbar.appendChild(påmelding)
+    hamburger_dropdown.appendChild(påmelding)
     let billetter = document.createElement("a")
     billetter.href = "Billettsalg.html"
     billetter.innerText = "Billetter"
-    navbar.appendChild(billetter)
-    let hamburger_button = document.createElement("a")
-    hamburger_button.href = "javascript:void(0);"
-    hamburger_button.class = "icon"
-    hamburger_button.onclick = "myFunction()"
-    hamburger_button.innerHTML = "<i class=\"fa fa-bars\"></i>"
-    header_element.appendChild(hamburger_button)
-    header_element.appendChild(navbar)
+    hamburger_dropdown.appendChild(billetter)
 
-
+    function showNavigation() {
+        if (hamburger_dropdown.className == "clicked") {
+            hamburger_dropdown.className = "unclicked"
+        }
+        else{
+            hamburger_dropdown.className = "clicked"
+        }
+    }
 }
 else { //Desktop
     //Hjørne-elementer
@@ -112,43 +124,43 @@ else { //Desktop
     //undergrupper
     let styret = document.createElement("a")
     styret.innerText = "Styret"
-    styret.href = "Undergrupper/Styret.html"
+    styret.href = "Styret.html"
     undergrupper_dropdown.appendChild(styret)
     let bygg = document.createElement("a")
     bygg.innerText = "Bygg"
-    bygg.href = "Undergrupper/Bygg.html"
+    bygg.href = "Bygg.html"
     undergrupper_dropdown.appendChild(bygg)
     let dans = document.createElement("a")
     dans.innerText = "Dans"
-    dans.href = "Undergrupper/Dans.html"
+    dans.href = "Dans.html"
     undergrupper_dropdown.appendChild(dans)
     let kostymeOgRek = document.createElement("a")
     kostymeOgRek.innerText = "Kostyme og rekvisitta"
-    kostymeOgRek.href = "Undergrupper/Kostyme_og_rekvisitter.html"
+    kostymeOgRek.href = "Kostyme_og_rekvisitter.html"
     undergrupper_dropdown.appendChild(kostymeOgRek)
     let musikk = document.createElement("a")
     musikk.innerText = "Musikk"
-    musikk.href = "Undergrupper/Musikk.html"
+    musikk.href = "Musikk.html"
     undergrupper_dropdown.appendChild(musikk)
     let økonomi = document.createElement("a")
     økonomi.innerText = "Økonomi"
-    økonomi.href = "Undergrupper/Økonomi.html"
+    økonomi.href = "Økonomi.html"
     undergrupper_dropdown.appendChild(økonomi)
     let prDesign = document.createElement("a")
     prDesign.innerText = "PR og design"
-    prDesign.href = "Undergrupper/PR_og_design.html"
+    prDesign.href = "PR_og_design.html"
     undergrupper_dropdown.appendChild(prDesign)
     let skribent = document.createElement("a")
     skribent.innerText = "Skribent"
-    skribent.href = "Undergrupper/Skribent.html"
+    skribent.href = "Skribent.html"
     undergrupper_dropdown.appendChild(skribent)
     let teknikk = document.createElement("a")
     teknikk.innerText = "Teknikk"
-    teknikk.href = "Undergrupper/Teknikk.html"
+    teknikk.href = "Teknikk.html"
     undergrupper_dropdown.appendChild(teknikk)
     let velferd = document.createElement("a")
     velferd.innerText = "Velferd"
-    velferd.href = "Undergrupper/Velferd.html"
+    velferd.href = "Velferd.html"
     undergrupper_dropdown.appendChild(velferd)
 
     //Navbar
