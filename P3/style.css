@@ -70,13 +70,14 @@ body {
 
 }
 .img_in_focus{ /* brukes for å få et bilde i fokus*/
-  position: absolute;
+  position: fixed;
   max-height: 70vh;
   max-width: 70vw;
   left: 0px;
-  top:80px;
+  top:0px;
   z-index: 1;
-  /*i js, settes  paddings etter bildets og skjermens størrelse, top er alltid lik 10vh*/
+  /*i js, settes  paddings etter bildets og skjermens størrelse*/
+
   background-color: rgba(0,0,0,0.7);
 
 }
@@ -113,8 +114,8 @@ height: 100%
 }
 .video_top_title{
   justify-content:  center;
-  
-grid-column: span 2;
+  margin: auto;
+  grid-column: span 2;
 }
 .video_title{
   margin: auto;
