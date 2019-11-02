@@ -41,7 +41,7 @@ if (mq.matches) { //Mobile
 
     //Henter og definerer bilde til bruk i mobilmeny
     let hamburger_image = document.createElement("img")
-    hamburger_image.src = "Bilder/iconfinder_menu-alt_134216.svg"
+    hamburger_image.src = "Bilder/Hjemmesideelementer/iconfinder_menu-alt_134216.svg"
     hamburger_image.alt = " "//Denne skal bare vise linker til andre sider
     hamburger_image.id = "hamburger_image"
 
