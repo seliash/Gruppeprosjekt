@@ -13,15 +13,17 @@ function load() {
 	//console.log(bilder.Albums[bilder]);
 	//mydata = JSON.parse(bilder);
 //console.log(mydata);
+for (var i = 0; i < 3; i++) {
 
-/*
-	album=new Album("revy_id","en",mydata)
-	console.log(album);
-	Albums.push(album);
-	album=new Album("revy_TO", "to",mydata)
-		Albums.push(album);
-	console.log(JSON.stringify(Albums));
-*/
+album=bilder.Albums[i];
+//console.log(album);
+//console.log(album.album_id,album.album_title,album.images);
+a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+console.log(a);
+Albums.push(a)
+construct_album(album);
+}
+
 
 for (var i = 0; i < mydata.Albums.length; i++) {
 	//console.log(mydata.Albums[i].images);
@@ -178,7 +180,7 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 			bredde=img_element.offsetWidth;
 	    arkiv_høyde=body.clientHeight;
 			arkiv_bredde=window.innerWidth;
-			img_element.style.paddingTop="10vh";
+			img_element.style.paddingTop="calc( 10vh + 80px )";
 	    img_element.style.paddingBottom=" calc(" + (arkiv_høyde - høyde) + "px - 10vh) ";
 			img_element.style.paddingLeft= " calc(" + (arkiv_bredde - bredde)/2+ "px) ";
 			img_element.style.paddingRight=" calc(" + (arkiv_bredde - bredde)/2 + "px)";
