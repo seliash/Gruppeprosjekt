@@ -54,8 +54,8 @@ body {
 .arkiv_video_omrade{
 
   display: grid;
-  grid-template-rows: 0.15fr 1fr;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 0.15fr 0.15fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
 
   justify-content: center;
@@ -85,6 +85,15 @@ height: 100%
 .arkiv_title{
   grid-column: 1/end;
 
+}
+/*#video_title_1{
+  grid-column: 1
+}
+#video_title_2{
+  grid-column: 2
+}*/
+#video_title_3{
+  grid-column: 3/end
 }
 .knapp{
   width: 40px;

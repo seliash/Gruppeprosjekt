@@ -80,7 +80,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	lft_butn=document.createElement("button");
 	album.album_node.appendChild(lft_butn);
 	lft_butn.className="knapp";
-	lft_butn.appendChild(document.createTextNode("left"))
+	lft_butn.appendChild(document.createTextNode('\u276E'))
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
@@ -99,12 +99,12 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	rgt_butn=document.createElement("button");
 	album.album_node.appendChild(rgt_butn);
 	rgt_butn.className="knapp";
-	rgt_butn.appendChild(document.createTextNode("right"));//legger til teksten left til knappen
+	rgt_butn.appendChild(document.createTextNode('\u276F'));//legger til teksten left til knappen
 	//legger til EventListenere for de to knappene.
 	lft_butn.addEventListener('click',function(e){iterate(e.target,'l')})
 	rgt_butn.addEventListener('click',function(e){iterate(e.target,'r')})
 	//legger inn albumet i arkivet:
-	body.appendChild(album.album_node);
+	document.getElementById("arkiv_Bilder").appendChild(album.album_node);
 
 }
 
