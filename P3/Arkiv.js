@@ -114,17 +114,20 @@ function construct_album(album){//skal injektere hele albummet i HTML
 
 
 function iterate(butn_node, dir){
+console.log(butn_node.className);
 	pics=butn_node.parentNode;	//album noden
+	if (butn_node.className=="") {//om man trykker akkurat på teksten
+		pics=pics.parentNode
+	}
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
 //console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 	if (dir=="l") {
-			pics.insertBefore(	pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
-		//ser om vi kan iterere videre, ellers wrapper den
+		pics.insertBefore(pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
+			//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_l==-1) {
-			console.log("wrapper img_l");
 			album_data.img_l=album_data.images.length-1
 		}
-		//setter så bildet til venstre til å være det nye bildet.
+			//setter så bildet til venstre til å være det nye bildet.
 		newId=album_data.images[album_data.img_l];
 		pics.childNodes[1+1].src=addDriveSrc(newId);
 		pics.childNodes[1+1].id=newId;
@@ -137,8 +140,8 @@ function iterate(butn_node, dir){
 		}
 	}
 	else if (dir="r") {
-		pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
-		//ser om vi kan iterere videre, ellers wrapper den
+	pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
+	//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_r==album_data.images.length) {
 			album_data.img_r=0;
 		}

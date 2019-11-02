@@ -69,16 +69,15 @@ a{
 .arkiv_video_omrade{
   margin-top: 30px;
   display: grid;
-  grid-template-rows: 0.15fr 0.15fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.10fr 0.10fr 1fr 0.10fr 1fr;
+  grid-template-columns: 0.5fr 0.5fr;
   grid-column-gap: 10px;
 
   justify-content: center;
 }
 .arkiv_video_omrade iframe{
-  min-height: 10vh;
-  width: 100%;
-  height: 20vh;
+  height: calc( 35vw * 9 / 16 )
+
 }
 iframe{
   /*TODO: trenger å sette iframe høyde lik 9/16 av bredden */
@@ -93,14 +92,17 @@ height: 100%
    padding-bottom: 5px;
 
 }
-.arkiv_title , .arkiv_title_3{
-  padding-top: 5px;
+.arkiv_title {
   margin: auto;
-
-}
-.arkiv_title{
   grid-column: 1/end;
-
+}
+.video_top_title{
+  margin: auto;
+grid-column: span 2;
+}
+.video_title{
+  margin: auto;
+  padding-top: 10px;
 }
 /*#video_title_1{
   grid-column: 1
