@@ -1,6 +1,6 @@
 body{
   display: grid;
-  grid-template: 80px 1fr 80px/10% 1fr 10%;
+  grid-template: 80px 100% 80px/10% 1fr 10%;
   min-height: 100vh;
   margin: 0;
 }
@@ -50,6 +50,7 @@ body{
 /*Definerer hvor footeren er*/
 #footer_element{
   justify-content: space-around;
+  align-items: center;
   grid-area: 3/2/4/3;
 }
 #left_footer_element{grid-area: 3/1/4/2;}
@@ -159,6 +160,10 @@ body{
   z-index: 1;
 }
 
+#footer_element p{
+  margin: 0;
+}
+
 /*Styling for linkene i footeren*/
 #footer_element p a:link, a:visited{
   color: black;
@@ -168,4 +173,9 @@ body{
 }
 #footer_element p a:hover{
   text-decoration: underline;
+}
+
+#footer_element img{
+  height: 30px;
+  padding: 0 3px 0 3px;
 }

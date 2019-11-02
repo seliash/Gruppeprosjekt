@@ -31,9 +31,31 @@ header_element.appendChild(logo_wrapper)
 
 //Footer
 footer_element.appendChild(document.createElement("p"))
-footer_element.childNodes[0].innerHTML = "Kontakt Naborevyen: <br> <a href=\"mailto: naborevy1@gmail.com\">E-post: naborevy1@gmail.com</a>"
-footer_element.appendChild(document.createElement("p"))
-footer_element.childNodes[1].innerHTML = "Facebook: <br> <a href=\"https://www.facebook.com/naborevyen\" target=\"_blank\">facebook.com/naborevyen</a>"
+footer_element.childNodes[0].innerHTML = "Kontakt oss: <br> <a href=\"mailto: naborevy1@gmail.com\">naborevy1@gmail.com</a>"
+footer_element.appendChild(document.createElement("div"))
+footer_element.childNodes[1].appendChild(document.createElement("p"))
+footer_element.childNodes[1].firstChild.innerText = "Sosiale medier:"
+footer_element.childNodes[1].appendChild(document.createElement("div"))
+footer_element.childNodes[1].childNodes[1].appendChild(document.createElement("a"))
+footer_element.childNodes[1].childNodes[1].appendChild(document.createElement("a"))
+footer_element.childNodes[1].childNodes[1].appendChild(document.createElement("a"))
+footer_element.childNodes[1].childNodes[1].childNodes[0].appendChild(document.createElement("img"))
+footer_element.childNodes[1].childNodes[1].childNodes[1].appendChild(document.createElement("img"))
+footer_element.childNodes[1].childNodes[1].childNodes[2].appendChild(document.createElement("img"))
+footer_element.childNodes[1].childNodes[1].childNodes[0].href = "https://www.facebook.com/naborevyen/"
+footer_element.childNodes[1].childNodes[1].childNodes[1].href = "https://www.instagram.com/naborevyen/"
+footer_element.childNodes[1].childNodes[1].childNodes[2].href = "https://www.youtube.com/channel/UCfSrgsnrHl_qZKESvrx37Bg"
+footer_element.childNodes[1].childNodes[1].childNodes[0].target = "_blank"
+footer_element.childNodes[1].childNodes[1].childNodes[1].target = "_blank"
+footer_element.childNodes[1].childNodes[1].childNodes[2].target = "_blank"
+footer_element.childNodes[1].childNodes[1].childNodes[0].firstChild.src = "Bilder/Hjemmesideelementer/Facebook.png"
+footer_element.childNodes[1].childNodes[1].childNodes[1].firstChild.src = "Bilder/Hjemmesideelementer/Instagram.png"
+footer_element.childNodes[1].childNodes[1].childNodes[2].firstChild.src = "Bilder/Hjemmesideelementer/Youtube.png"
+footer_element.childNodes[1].childNodes[1].childNodes[0].firstChild.alt = "Facebook"
+footer_element.childNodes[1].childNodes[1].childNodes[1].firstChild.alt = "Instagram"
+footer_element.childNodes[1].childNodes[1].childNodes[2].firstChild.alt = "YouTube"
+
+
 
 //Header
 var mq = window.matchMedia("(max-width: 900px)");
