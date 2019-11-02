@@ -16,7 +16,16 @@ p {
 body {
   overflow-x: hidden;
 }
-
+a{
+  margin-bottom: 25px;
+  background-color: inherit;
+  line-height: 1.5;
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+}
 .Arkiv_Bilder{
 
   display: grid;
