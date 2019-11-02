@@ -6,40 +6,39 @@ img_6.addEventListener('click',function(){clicked(img_6)});
 arkiv_bilder=document.getElementById("");
 
 function load() {
-	console.log(bilder);
-	console.log(bilder);
-	mydata=JSON.parse(bilder);
+	//console.log(bilder);
+	//console.log(bilder);
+	//mydata=JSON.parse(bilder);
+	mydata = JSON.parse(JSON.stringify(bilder));
 	//console.log(bilder.Albums[bilder]);
 	//mydata = JSON.parse(bilder);
 //console.log(mydata);
 
-
+/*
 	album=new Album("revy_id","en",mydata)
 	console.log(album);
 	Albums.push(album);
 	album=new Album("revy_TO", "to",mydata)
 		Albums.push(album);
 	console.log(JSON.stringify(Albums));
+*/
 
-	/*for (var album  of bilder){
-
-	}
-for (var i = 0; i < bilder.length; i++) {
-	album=bilder[i][0];
-	console.log(album.album_id,album.album_title,album.images);
+for (var i = 0; i < mydata.Albums.length; i++) {
+	//console.log(mydata.Albums[i].images);
+	album=bilder.Albums[i];
+	//console.log(album);
+	//console.log(album.album_id,album.album_title,album.images);
 	a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+	console.log(a);
 	Albums.push(a)
-
-}*/
+	construct_album(album);
+}
 
 	console.log(Albums);
-	construct_album(album);
+	//construct_album(album);
 
 //test på innlastning
 
-	for (var i = 0; i < 50; i++) {
-		construct_album(album);
-	}
 }
 
 class Album {
@@ -74,13 +73,16 @@ function construct_album(album){//skal injektere hele albummet i HTML
 //Oppretter h2-elementet
 	h2=document.createElement("h2")
 	h2.className="arkiv_title";
-	h2.appendChild(document.createTextNode(album.album_id)); //legger til teksten inne i h2
+	h2.innerHTML=album.album_title; //legger til teksten inne i h2
 	album.album_node.appendChild(h2); //legger til h2 i albummet.
 //Oppretter venstre button
 	lft_butn=document.createElement("button");
 	album.album_node.appendChild(lft_butn);
 	lft_butn.className="knapp";
-	lft_butn.appendChild(document.createTextNode('\u276E'))
+	p_element=document.createElement("P");
+	p_element.innerHTML='\u276E';
+	lft_butn.appendChild(p_element)
+
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
@@ -99,7 +101,9 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	rgt_butn=document.createElement("button");
 	album.album_node.appendChild(rgt_butn);
 	rgt_butn.className="knapp";
-	rgt_butn.appendChild(document.createTextNode('\u276F'));//legger til teksten left til knappen
+	p_element=document.createElement("P");
+	p_element.innerHTML='\u276F';
+	rgt_butn.appendChild(p_element)//legger til teksten left til knappen
 	//legger til EventListenere for de to knappene.
 	lft_butn.addEventListener('click',function(e){iterate(e.target,'l')})
 	rgt_butn.addEventListener('click',function(e){iterate(e.target,'r')})
