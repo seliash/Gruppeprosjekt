@@ -1,6 +1,6 @@
 body{
   display: grid;
-  grid-template: 80px 1fr 80px/10% 1fr 10%;
+  grid-template: 80px 100% 80px/10% 1fr 10%;
   min-height: 100vh;
   margin: 0;
 }
