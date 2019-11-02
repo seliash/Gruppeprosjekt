@@ -112,7 +112,8 @@ height: 100%
   grid-column: 1/end;
 }
 .video_top_title{
-  margin: auto;
+  justify-content:  center;
+  
 grid-column: span 2;
 }
 .video_title{

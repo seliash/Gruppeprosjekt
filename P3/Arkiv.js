@@ -114,7 +114,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 
 
 function iterate(butn_node, dir){
-console.log(butn_node.className);
+//console.log(butn_node.className);
 	pics=butn_node.parentNode;	//album noden
 	if (butn_node.className=="") {//om man trykker akkurat på teksten
 		pics=pics.parentNode
