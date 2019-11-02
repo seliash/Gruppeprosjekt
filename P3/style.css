@@ -16,15 +16,30 @@ p {
 body {
   overflow-x: hidden;
 }
-a{
+.oversikt_undergrupper_boks{
+  margin: auto;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 25px;
+  grid-template-rows: repeat(4,1fr);
+  grid-row-gap: 50px;
+  justify-content: center;
+}
+.oversikt_undergrupper_boks a{
+
   margin-bottom: 25px;
   background-color: inherit;
   line-height: 1.5;
-  font-size: 16px;
   color: inherit;
   text-decoration: none;
   text-align: center;
-  position: relative;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.oversikt_undergrupper_boks h1{
+  text-align: center;
 }
 .Arkiv_Bilder{
 
@@ -179,11 +194,10 @@ grid-column: span 2;
 .gruppeleder {
   grid-column: 3;
   padding: 20px;
-
 }
 
 .lederbilde{
-  padding: 0 20% 0 20%;
+  padding-left: 20%;
   width: 60%;
 }
 
@@ -195,13 +209,6 @@ grid-column: span 2;
   grid-template-rows: repeat(4,1fr);
   grid-row-gap: 50px;
   justify-content: center;
-}
-.undergrupper_boks{
-  grid-row: 1/3;
-  grid-column: 1/3;
-  border-radius: 1px;
-  border-color: black;
-  border-style: solid;
 }
 
 .banner_element {
