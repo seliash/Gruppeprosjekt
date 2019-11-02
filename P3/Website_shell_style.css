@@ -22,6 +22,7 @@ body{
   background-color: #a01405;
   color: #ffce46;
   display: flex;
+  z-index: 9999;
 }
 
 /*Setter max-høyden til logoen lik høyden til navbaren*/
