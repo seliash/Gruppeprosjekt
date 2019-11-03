@@ -35,7 +35,7 @@ body {
   text-align: center;
   width: 50%;
   margin-left: 25%;
-  font-size: 1.5em;
+  font-size: 18px;
 }
 
 .oversikt_undergrupper_boks h1{
@@ -43,7 +43,7 @@ body {
 }
 .oversikt_undergrupper_boks{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,400px);
   grid-column-gap: 15px;
   grid-template-rows: repeat(4,300px);
   grid-row-gap: 25px;
