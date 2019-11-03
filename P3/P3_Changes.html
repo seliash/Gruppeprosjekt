@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Doc_style.css">
+    <title>P3 design changes</title>
+  </head>
+  <body>
+    <h1>P3 Design changes</h1>
+    <h3>David, Eskild, Hans, Sander</h3>
+    <h4>02.11.2019</h4>
+    <h2>
+      Administratitive detaljer
+    </h2>
+    <p>
+      Klient: Jonas Eide, PR-sjef i Naborevyen.
+      Naborevyen er en studentrevy som hvert år arrangeres av Spanskrøret og Timini,
+      linjeforeningene til Lektorutdanning med Realfag og Nanoteknologi henholdsvis.
+      Styret i Naborevyen ønsker en nettside de kan bruke til promotering og informasjonsflyt
+      for interesserte partier og interne medlemmer.
+      PR-sjefen har blitt satt opp med ansvaret for å være vår primære klient, ettersom vårt
+      prosjekt går innenfor hans arbeid med promotering av revyen.
+    </p>
+
+    <h1>
+      Endringer vi gjorde underveis
+    </h1>
+    <h3>
+      Navigasjonsstruktur
+    </h3>
+
+    <h2>
+      Side-layout og utforming
+    </h2>
+
+    <ul>
+      <li>Font: Helvetica</li>
+      <li>Farger
+      <ul>
+        <li>Tekst: Svart</li>
+        <li>Bakgrunn: Hvit (med forbehold om endringer)</li>
+        <li>Lenker i avsnitt: Blå</li>
+        <li>Header: Hvit bakgrunn, logoen oppe i venstre hjørne, navigasjonbaren
+        blir høyrestilt på headeren</li>
+        <li>Footer: Rød bakgrunn #a01405, gule aksenter #ffce46.
+          Dette er fargene som er brukt på logoen.</li>
+      </ul></li>
+      <li>Navigasjonsbar: Knappene til de ulike undersidene endrer farge når
+      musepekeren svever over de, og blir den samme rødfargen som i logoen og footeren,
+      samtidig som teksten blir hvit. I tillegg hvis denne undersiden leder til
+      flere undersider vil lenker til disse dukke opp som en "rullegardin" av flere knapper
+      med samme farge og tekstfarge.</li>
+      <li>Body max-bredde: 80%</li>
+    </ul>
+
+    <h2>
+      Innhold
+    </h2>
+    <h3>Startside</h3>
+    <p>
+      Startsiden er siden man ender opp på når man følger linken til hjemmesiden til klienten.
+      Den skal inneholde en bildeserie som banner øverst på siden,
+      hvor en serie med bilder skal veksle på å vises.
+      På høyre side av startsiden skal det ligge en embedded Google Calendar.
+      Grunnen til at vi bruker Google Calendar er for at det skal være lett
+      for klienten å legge inn events i kalenderen. Det skal også være mulighet til å legge inn artikler
+      på startsiden, og nye artikler skal legge seg på toppen. Man skal også ha mulighet til å feste
+      artikler på toppen av startsiden som festede innlegg. Vi er ikke helt sikre på hvordan vi skal
+      gjøre dette ennå, men regner med at vi trenger noe JavaScript.
+      Denne siden kommer sannsynligvis til å bli en av de vanseligste å lage.
+    </p>
+
+    <h3>Undergrupper</h3>
+    <p>
+      Dette er en side som linker videre til sidene med de 11 spesifikke undergruppene.
+      På denne siden skal det være et bilde og en tittel til hver undergruppene,
+      og både bilde og tittelen skal være hyperlinker til disse sidene.
+      Man skal ikke trenge å besøke denne siden for å komme til undergruppene,
+      men det skal være mulig å besøke den for å få litt mer generell info før man besøker siden
+      til en spesifikk undergruppe.
+    </p>
+    <h4>Undergruppe: Styret</h4>
+    <p>
+      Denne siden har info om undergruppen "Revystyret".
+      Dette inkluderer styremedlemmer med titler, bilde av styremedlemmene,
+      og info om når styremedlemmene ble valgt og hvor lenge de er valgt inn i styret for.
+    </p>
+    <h4>Undergruppesider</h4>
+    <p>
+      Disse sidene har info om de ulike undergruppene.
+      De skal inneholde en beskrivelse av hva undergruppen gjør og har ansvar for.
+      De skal også inneholde et bilde av gruppelederen og et gruppebilde med medlemmene.
+      Navnene på de ulike gruppene er Bygg, Kostyme og Rekvisitter, Dans, Musikk og Band,
+      PR og Design, Velferd, Skribent, Økonomi, og Teknikk.
+    </p>
+
+    <h3>Om oss</h3>
+    <p>
+      Om oss-siden skal informere om hva og hvem Naborevyen er. Der skal det stå generell info om Naborevyen,
+      som når den ble startet, hvem som er med å arrangerer den, når den arrangeres og hva som er årets tema.
+      Det kan også være noen bilder fra tidligere revyer som viser litt av hva som har skjedd på tidligere revyer.
+    </p>
+
+    <h3>Billettsalg</h3>
+    <p>
+      Denne siden skal brukes til å selge billetter til Naborevyen. Naborevyen bruker TicketCo til
+      å selge billetter, så vi ønsker helst å implementere TicketCo-siden til Naborevyen ved å
+      bruke APIen til TicketCo. Hvis dette ikke lar seg gjøre eller er i strid med prosjektkravene,
+      kommer linken til denne siden heller til å linke direkte til TicketCo-siden, og denne siden
+      vil ikke eksistere. Det unike for denne siden er at vi må implementere en API, og dette blir
+      en av de mest interaktive sidene på hjemmesiden.
+    </p>
+
+    <h3>Påmelding</h3>
+    <p>
+      Denne siden skal brukes til påmelding til de forskjellige undergruppene.
+      Siden vi ikke har mulighet til å bruke databaser, tenker vi å lage en form i HTML som
+      integrerer med Google Forms, og legge inn påmeldinger til ulike grupper i et Google regneark.
+      Det unike med denne siden er at vi må implementre en API,
+      og at dette er den eneste siden der brukerne må skrive inn tekst som skal lagres.
+    </p>
+
+    <h3>Arkiv</h3>
+    <p>
+      Arkiv-siden skal inneholde bilder og videoer fra tidligere revyer.
+      Den skal gjøre det enkelt å se de tidligere revyene på video,
+      og også finne bilder til for eksempel promotering.
+      Det unike med denne siden er at vi må embedde YouTube-videoer
+      og lage bildeserier så man kan gå gjennom bildene fra tidligere år på en grei måte.
+      Hvis vi får det til, ønsker vi å kunne sortere bildeserier basert på hvilket
+      album de besøkende til nettsiden ønsker å se basert på en dropdown-meny eller noe lignende.
+    </p>
+
+    <h3>Artikkel</h3>
+    <p>
+      Artikkel-sidene er generiske sider som klienten selv skal ha mulighet til å lage,
+      og de skal vises på forsiden. Man kommer til disse sidene ved å trykke på artiklene
+      på startsiden, men det vil strengt tatt ikke være nødvendig å besøke dem,
+      siden de vises på startsiden. Disse sidene skal inneholde tekst, bilder og evt. video.
+    </p>
+
+    <h2>
+      Minimumskrav (JavaScript)
+    </h2>
+    <p>
+      De fire minimumskravene for JavaScripting er disse fire funksjonene:
+  </p>
+      <ol>
+        <li>Menyanimasjoner
+        <ul> <li>Et script som animerer menyene til header og evt andre menyer.</li> </ul> </li>
+        <li>Nyhetsstrøm til fremsiden
+        <ul> <li> Et skript som fordeler plass og innhold i news-feeden på fremsiden.</li> </ul> </li>
+        <li>Form og datavalidering
+        <ul> <li> Innmeldingsskjema med datavalidering. </li> </ul> </li>
+        <li>Bildebanner
+        <ul> <li> Bannere med bilder på rundgang. </li> </ul> </li>
+      </ol>
+
+    <h2>
+      Plan
+    </h2>
+    <h3>Filstruktur</h3>
+    <img class="Mockup" src="../Images/Filstruktur.png" alt="Filstruktur Mockup">
+    <h3>Plan for gjennomføring</h3>
+    <table style="width:80%">
+      <tr>
+        <th>Hva</th>
+        <th>Beskrivelse</th>
+        <th>Hvem</th>
+        <th>Frist</th>
+      </tr>
+      <tr>
+        <td>Generell informasjon</td>
+        <td>Bilder, tekst og annen relevant informasjon fra klienten.</td>
+        <td>Alle</td>
+        <td>6. Oktober</td>
+      </tr>
+      <tr>
+        <td>Om_oss.html</td>
+        <td>Historisk informasjon om naborevyen, generell infoside.</td>
+        <td>Sander</td>
+        <td>13. Oktober</td>
+      </tr>
+      <tr>
+        <td>Oversikt_undergrupper.html</td>
+        <td>Side med bilder og fordeling av de ulike undergruppene.</td>
+        <td>David</td>
+        <td>13. Oktober</td>
+      </tr>
+      <tr>
+        <td>Undergrupper.html</td>
+        <td>Side med; Banner fra gruppeaktivitet. Informasjon om gruppa og dens arbeidsområder.
+            Bilde av Gruppeleder + info om personen. </td>
+        <td>Eskild</td>
+        <td>13. Oktober</td>
+      </tr>
+      <tr>
+        <td>Arkiv.html</td>
+        <td>Bildearkiv og innlagt youtube videoer. Skal sorteres etter år.</td>
+        <td>Hans Kristian</td>
+        <td>13. Oktober</td>
+      </tr>
+      <tr>
+        <td>Hjemmeside.html</td>
+        <td>Hjemmesiden. Kalender, banner, some-plugs, nyheter.</td>
+        <td>Alle</td>
+        <td>20. Oktober</td>
+      </tr>
+      <tr>
+        <td>Billettsalg.html</td>
+        <td>Innlagt billettsalg side.</td>
+        <td>Hans Kristian og Eskild</td>
+        <td>27. Oktober</td>
+      </tr>
+      <tr>
+        <td>Påmelding.html</td>
+        <td>Enten: innlagt billettleverandør side. Eller: Link til billettleverandør.</td>
+        <td>Sander og David</td>
+        <td>27. Oktober</td>
+      </tr>
+      <tr>
+        <td>Style.css</td>
+        <td>Stiler, Logo, bannere og diverse. (Dette skal arbeides med kontinuerlig fra start).</td>
+        <td>Alle</td>
+        <td>27. Oktober</td>
+      </tr>
+      <tr>
+        <td>Header.js</td>
+        <td>Et script for å håndtere headeren, med dens rullgardin menyer.</td>
+        <td>Eskild</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Menyanimasjoner.js</td>
+        <td>Et script som animerer menyene til header og  evt andre.</td>
+        <td>Sander</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Frontpage_news_feed.js</td>
+        <td>Et skript som fordeler plass og innhold i news-feeden på fremsiden.</td>
+        <td>David</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Form/Data_validation.js</td>
+        <td>Innmeldingsskjema med datavalidering.</td>
+        <td>Sander</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Sliding_banner.js</td>
+        <td>Bannere med bilder på rundgang.</td>
+        <td>Eskild</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Bildefokus.js</td>
+        <td>Brukere som trykker på bilde får det i fokus/slideshow effekt</td>
+        <td>David</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Arkiv.js</td>
+        <td>Script for å sortere, avgrense og søke i arkivet.</td>
+        <td>Hans Kristian</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>READ_ME.txt</td>
+        <td>Brukermanual slik at revyen selv kan drifte nettsiden.</td>
+        <td>Alle</td>
+        <td>3. November</td>
+      </tr>
+      <tr>
+        <td>Brukertesting</td>
+        <td>Masseteste siden ved hjelp av Google Forms. Live testing med et utvalg av testere.
+            Skriving av testdokumentet.</td>
+        <td>Alle</td>
+        <td>10. November</td>
+      </tr>
+    </table>
+  </body>
+</html>

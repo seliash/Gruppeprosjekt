@@ -1,0 +1,49 @@
+html, body{
+  margin: auto;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  background-color: lightsteelblue;
+  font-family: Helvetica, sans-serif;
+  width: auto;
+  max-width: 60%;
+}
+
+h1{
+  font-size: 1.8em;
+}
+
+p{
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+.Mockup{
+  position: relative;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  border: black;
+  border-width: thick;
+  border-style: solid;
+}
+
+table, th, td {
+	border: 1px solid black;
+  font-size: 1.1em;
+  text-align: center;
+}
+table{
+  position: relative;
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+	margin-bottom: 8%;
+}
+
+li {
+	line-height: 150%;
+	font-size: 20px
+}
