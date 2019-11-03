@@ -29,19 +29,19 @@ body {
 .oversikt_undergrupper_boks a{
   margin-bottom: 25px;
   background-color: inherit;
-  line-height: 1.5;
+  line-height: 0;
   color: inherit;
   text-decoration: none;
   text-align: center;
   width: 50%;
   margin-left: 25%;
+  font-size: 1.5em;
 }
 
 .oversikt_undergrupper_boks h1{
   text-align: center;
 }
 .oversikt_undergrupper_boks{
-
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-column-gap: 15px;
