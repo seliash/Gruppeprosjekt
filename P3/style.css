@@ -27,7 +27,6 @@ body {
   justify-content: center;
 }
 .oversikt_undergrupper_boks a{
-
   margin-bottom: 25px;
   background-color: inherit;
   line-height: 1.5;
@@ -40,6 +39,15 @@ body {
 
 .oversikt_undergrupper_boks h1{
   text-align: center;
+}
+.oversikt_undergrupper_boks{
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 15px;
+  grid-template-rows: repeat(4,300px);
+  grid-row-gap: 25px;
+  justify-content: center;
 }
 .Arkiv_Bilder{
 
@@ -209,16 +217,6 @@ height: 100%
 .lederbilde{
   padding-left: 20%;
   width: 60%;
-}
-
-.oversikt_undergrupper_boks{
-
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-column-gap: 25px;
-  grid-template-rows: repeat(4,1fr);
-  grid-row-gap: 50px;
-  justify-content: center;
 }
 
 .banner_element {
