@@ -26,9 +26,9 @@ document.getElementsByTagName("html")[0].className = "html_shell"
 //Legger logo inn i header-element
 logo_wrapper = document.createElement("a")
 logo_wrapper.appendChild(logo_image)
-logo_wrapper.href = "Hovedside.html"
+logo_wrapper.href = "http://folk.ntnu.no/hkvie/"
 logo_wrapper.id = "logo_image_wrapper"
-logo_image.src = "../P3/Bilder/Logoer/Naborevyen_logo_cropped.png"
+logo_image.src = "Bilder/Logoer/Naborevyen_logo_cropped.png"
 logo_image.alt = " "//Denne skal linke tilbake til hovedsiden, så den skal ikke ha noe navn
 logo_image.id = "logo_image"
 header_element.appendChild(logo_wrapper)
