@@ -1,18 +1,34 @@
 var Albums=[];
+var picsToShow=5;
 var body = document.getElementById("arkiv_body"); //arkiv boddyen
-/*img_6=document.getElementById("6");
-img_6.addEventListener('click',function(){clicked(img_6)});
-*/
+
 arkiv_bilder=document.getElementById("");
 
+window.onresize = function() {
+  /*  console.log(x = window.matchMedia( "(max-width: 900px)" ));
+		console.log("outer width: " + window.outerWidth);
+		console.log("inner width: " + window.innerWidth);
+		console.log(window);*/
+};
 function load() {
-	//console.log(bilder);
-	//console.log(bilder);
-	//mydata=JSON.parse(bilder);
+
+	//var x = window.matchMedia( "(max-width: 900px)" );
+	x=window.innerWidth;
+	if (x<700) {
+		 // window width is at less than 700px
+
+			picsToShow=3;
+	}
+	else if (x<900) {
+	    // window width is at less than 900px
+			picsToShow=4;
+	}
+	else {
+	    // window width is greater than 900px
+			picsToShow=5;
+	}
+
 	mydata = JSON.parse(JSON.stringify(bilder));
-	//console.log(bilder.Albums[bilder]);
-	//mydata = JSON.parse(bilder);
-//console.log(mydata);
 for (var i = 0; i < 3; i++) {
 
 album=bilder.Albums[i];
@@ -49,7 +65,7 @@ class Album {
 		this.album_title=album_title
 		this.images=img_data
 		this.img_l=-1
-		this.img_r=5//pekere til neste bilde
+		this.img_r= picsToShow//pekere til neste bilde
 		this.album_node=null
 	}
 }
@@ -88,7 +104,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 // legger inn de første 5 bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
-	for (var i = 0; i < 5; i++) {
+	for (var i = 0; i < picsToShow; i++) {
 		im=document.createElement("img");
 		im.src=addDriveSrc(album.images[i])
 		im.className= "hoverable";
@@ -124,7 +140,7 @@ function iterate(butn_node, dir){
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
 //console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 	if (dir=="l") {
-		pics.insertBefore(pics.childNodes[1+5],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
+		pics.insertBefore(pics.childNodes[1+picsToShow],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
 			//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_l==-1) {
 			album_data.img_l=album_data.images.length-1
@@ -142,7 +158,7 @@ function iterate(butn_node, dir){
 		}
 	}
 	else if (dir="r") {
-	pics.insertBefore( pics.childNodes[1+1], pics.childNodes[7])
+	pics.insertBefore( pics.childNodes[1+1], pics.childNodes[picsToShow+2])
 	//ser om vi kan iterere videre, ellers wrapper den
 		if (album_data.img_r==album_data.images.length) {
 			album_data.img_r=0;
