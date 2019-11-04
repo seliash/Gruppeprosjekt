@@ -47,14 +47,25 @@ body{
   }
 }
 
-/*Definerer hvor footeren er*/
 #footer_element{
   justify-content: space-around;
   align-items: center;
-  grid-area: 3/2/4/3;
 }
-#left_footer_element{grid-area: 3/1/4/2;}
-#right_footer_element{grid-area: 3/3/4/4;}
+
+/*Definerer hvor footeren er*/
+@media only screen and (min-width: 900px) {
+  #footer_element{
+    grid-area: 3/2/4/3;
+  }
+  #left_footer_element{grid-area: 3/1/4/2;}
+  #right_footer_element{grid-area: 3/3/4/4;}
+}
+
+@media only screen and (max-width: 900px) {
+  #footer_element{
+    grid-area: 3/1/4/4;
+  }
+}
 
 /*Setter knappene på toppen til en block og fjerner styling*/
 @media only screen and (min-width: 900px) {
