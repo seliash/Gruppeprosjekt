@@ -61,25 +61,26 @@ body {
 
 @media only screen and (max-width: 900px) {
 .Arkiv_Bilder{
-  background-color: red;
+
   grid-template-columns:0.1fr repeat(4,1fr) 0.1fr;
 }
 }
 @media only screen and (max-width: 700px) {
 .Arkiv_Bilder{
   grid-template-columns:0.1fr repeat(3,1fr) 0.1fr;
-  background-color: blue;
+
 }
 }
 
 .hoverable{ /* alle bilder i arkivet har denne*/
   margin: auto;
   display: grid;
+
   justify-content: center;
   width: 95%; /*Maks størrelse skal være grid størrelsen til Arkiv_Bilder*/
-
+  height: 17vh;
   padding: 2.5%;
-  max-height: 19vh;
+  object-fit: cover;
 }
 .hoverable:hover{
   padding:0px;
@@ -104,7 +105,7 @@ body {
 .arkiv_video_omrade{
   margin-top: 30px;
   display: grid;
-  grid-template-rows: 0.10fr 0.10fr 1fr 0.10fr 1fr;
+  grid-template-rows: 0.10fr 0.10fr   calc( 35vw * 9 / 16 ) 0.10fr 1fr;
   grid-template-columns: 0.5fr 0.5fr;
   grid-column-gap: 10px;
 
@@ -151,7 +152,7 @@ height: 100%
 }
 .knapp {
   margin: auto;
-  height: 50%;
+  height: 6vh;
   width: 40px;
   position: relative;
   background-color: #a01405;
@@ -162,6 +163,7 @@ height: 100%
    background-color:#821308;
 }
 .knapp p {
+  margin: auto;
   color: #ffce46;
 }
 
