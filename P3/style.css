@@ -61,12 +61,14 @@ body {
 
 @media only screen and (max-width: 900px) {
 .Arkiv_Bilder{
+  background-color: red;
   grid-template-columns:0.1fr repeat(4,1fr) 0.1fr;
 }
 }
 @media only screen and (max-width: 700px) {
 .Arkiv_Bilder{
   grid-template-columns:0.1fr repeat(3,1fr) 0.1fr;
+  background-color: blue;
 }
 }
 

@@ -6,6 +6,9 @@ let header_element = document.createElement("div")
 header_element.id = "header_element"
 header_element.className = "header_footer_class"
 let shell_style = document.createElement("link")
+let viewportdef = document.createElement("Meta")
+viewportdef.name="viewport"
+viewportdef.content="width=device-width,initial-scale=1"
 document.body.appendChild(header_element)
 document.body.appendChild(footer_element)
 
@@ -17,6 +20,7 @@ shell_style.href = "Website_shell_style.css"
 document.getElementsByTagName("html")[0].lang = "no-nb"
 document.getElementsByTagName("html")[0].dir = "ltr"
 document.getElementsByTagName("head")[0].appendChild(shell_style)
+document.getElementsByTagName("head")[0].appendChild(viewportdef)
 document.getElementsByTagName("html")[0].className = "html_shell"
 
 //Legger logo inn i header-element
