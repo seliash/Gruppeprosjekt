@@ -1,5 +1,5 @@
 * {
-  font-family: Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 
 }
 img{
@@ -176,14 +176,12 @@ height: 100%
   grid-column-end: 3;
   text-align: center;
   font-weight: bold;
-  border-bottom: 1px red solid;
-  border-right: 1px red solid;
 }
 .tekst_boks{
   grid-row: 2/3;
   grid-column: 1/3;
+  margin: 20px;
   padding: 20px;
-  border-right: 1px red solid;
 }
 
 #festet{
@@ -193,6 +191,32 @@ height: 100%
 #kalender_boks{
   grid-column: 4;
   grid-row: 1/3;
+}
+
+#kalender_boks iframe{
+  height: 60vh;
+}
+
+@media only screen and (max-width: 900px) {
+  #hovedside_boks{
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px repeat(3, auto);
+  }
+  .nyheter_boks, .tekst_boks, #festet, #kalender_boks{
+    grid-column: 1;
+  }
+  #festet{
+    grid-row: 2;
+  }
+  .tekst_boks{
+    grid-row: 3;
+  }
+  #kalender_boks{
+    grid-row: 4;
+  }
+  #kalender_boks iframe{
+    width: 100%;
+  }
 }
 
 .gruppeboks {
@@ -219,6 +243,22 @@ height: 100%
 .lederbilde{
   padding-left: 20%;
   width: 60%;
+}
+
+@media only screen and (max-width: 900px) {
+  .gruppeboks {
+    grid-template-columns: 1fr;
+  }
+  .gruppetekst {
+    grid-column: 1;
+  }
+  .gruppeleder {
+    grid-column: 1;
+  }
+  .lederbilde {
+    min-height: 50vh;
+    object-fit: contain;
+  }
 }
 
 .banner_element {
