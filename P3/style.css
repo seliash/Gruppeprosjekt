@@ -47,7 +47,12 @@ body {
   .oversikt_undergrupper_boks{
     grid-template-columns: 1fr;
     grid-column-gap: 0;
-    grid-template-rows: repeat(12, 350px);
+    grid-template-rows: repeat(12, auto);
+  }
+  .oversikt_undergrupper_boks img{
+    width: 40vw;
+    min-height: 40vh;
+    object-fit:cover;
   }
 }
 
