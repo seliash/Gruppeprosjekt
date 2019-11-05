@@ -279,6 +279,10 @@ height: 100%
 
 .slides{
   display: none;
+  min-height: 20vh;
+  max-height: 40vh;
+  width: 100vw;
+  object-fit: cover;
 }
 
 .prev, .next{
