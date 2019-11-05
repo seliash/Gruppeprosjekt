@@ -18,13 +18,21 @@ body {
 }
 
 .oversikt_undergrupper_boks{
-  margin: auto;
+
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(3,35%);
-  grid-column-gap: 15px;
-  grid-template-rows: repeat(4,350px);
-  grid-row-gap: 25px;
-  justify-content: center;
+  grid-template-columns: repeat(3,33%);
+  /*grid-column-gap: 5px;*/
+  grid-template-rows: repeat(4,auto);
+  grid-row-gap: 5px;
+  /*justify-content: center;*/
+}
+.oversikt_undergrupper_boks img{
+  max-width: 150%;
+  width: 20vh;
+  height: 20vh;
+  min-height: 20vh;
+  object-fit:cover;
 }
 
 .oversikt_undergrupper_boks a{
@@ -39,21 +47,19 @@ body {
   font-size: 18px;
 }
 
-.oversikt_undergrupper_boks h1{
+.oversikt_undergrupper_boks h1,h3{
   text-align: center;
+  justify-content:  center;
 }
 
 @media only screen and (max-width: 900px) {
   .oversikt_undergrupper_boks{
+
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-template-rows: repeat(12, auto);
   }
-  .oversikt_undergrupper_boks img{
-    width: 40vw;
-    min-height: 40vh;
-    object-fit:cover;
-  }
+
 }
 
 .Arkiv_Bilder{
