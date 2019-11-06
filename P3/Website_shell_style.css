@@ -30,14 +30,19 @@ body{
   max-height: 80px;
 }
 
-/*Definerer hvor headeren er på desktop*/
+/*Definerer hvor headeren og footeren er på desktop*/
 @media only screen and (min-width: 900px) {
   #header_element{
     grid-area: 1/2/2/3;
     justify-content: space-between;
   }
+  #footer_element{
+    grid-area: 3/2/4/3;
+  }
   #left_header_element{grid-area: 1/1/2/2;}
   #right_header_element{grid-area: 1/3/2/4;}
+  #left_footer_element{grid-area: 3/1/4/2;}
+  #right_footer_element{grid-area: 3/3/4/4;}
 }
 
 /*Definerer hvor headeren er på mobile*/
@@ -45,26 +50,15 @@ body{
   #header_element{
     grid-area: 1/1/2/4;
   }
+  #footer_element{
+    grid-area: 3/1/4/4;
+  }
+  #left_header_element, #right_header_element, #left_footer_element, #right_footer_element {display: none;}
 }
 
 #footer_element{
   justify-content: space-around;
   align-items: center;
-}
-
-/*Definerer hvor footeren er*/
-@media only screen and (min-width: 900px) {
-  #footer_element{
-    grid-area: 3/2/4/3;
-  }
-  #left_footer_element{grid-area: 3/1/4/2;}
-  #right_footer_element{grid-area: 3/3/4/4;}
-}
-
-@media only screen and (max-width: 900px) {
-  #footer_element{
-    grid-area: 3/1/4/4;
-  }
 }
 
 /*Setter knappene på toppen til en block og fjerner styling*/
@@ -85,9 +79,12 @@ body{
   }
 }
 
-
+/*Styling for knappene i headeren, desktop*/
 @media only screen and (min-width: 900px) {
-  /*Styling for knappene i headeren, desktop*/
+  #hamburger_wrapper{
+    display: none;
+  }
+
   #navbar li a{
     display: flex;
     align-items: center;
@@ -129,9 +126,14 @@ body{
 /*Setter høyden til hamburgerbildet for mobil*/
 #hamburger_image{
   height: 80px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
-
+/*Styling for knappene i headeren, mobile*/
 @media only screen and (max-width: 900px) {
+  #navbar{
+    display: none;
+  }
   #header_element{
     display: flex;
     justify-content: space-between;
