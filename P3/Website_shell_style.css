@@ -134,6 +134,7 @@ body{
   #navbar{
     display: none;
   }
+
   #header_element{
     display: flex;
     justify-content: space-between;

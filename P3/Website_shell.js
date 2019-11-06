@@ -113,7 +113,7 @@ dans.innerText = "Dans"
 dans.href = "Dans.html"
 undergrupper_dropdown.appendChild(dans)
 let kostymeOgRek = document.createElement("a")
-kostymeOgRek.innerText = "Kostyme og rekvisitta"
+kostymeOgRek.innerText = "Kostyme og rekvisitt"
 kostymeOgRek.href = "Kostyme_og_rekvisitter.html"
 undergrupper_dropdown.appendChild(kostymeOgRek)
 let musikk = document.createElement("a")
