@@ -1,10 +1,16 @@
 For endringer til framtidige Naborevyer:
 
-Endring av navn på gruppesjefer:
+Du åpner filen(e) i notisblokk (eller om du har kodeprogram som Atom osv, åpne der).
 
+Endring av navn på gruppesjefer:
+For endring av navn på gruppesjefer trenger du følgende filer: filen for navnet på gruppen.
+Så må du gå ned til dokumentet hvor det står "<div class="gruppeleder">", 2 linjer under her
+skal det stå <h2>Tittel: navn</h2>.
+Det eneste du skal endre her er hva som står mellom <h2> og </h2>, endre navnet, ikke mer.
 
 Endring av beskrivelser (f.eks. om naborevyen, eller undergruppene):
-
+For endringer av beskrivelser trenger du følgende filer: filen for navnet på siden/gruppen.
+Så må du gå n
 
 Artikler:
 
@@ -23,6 +29,8 @@ Endring av fargene på websiden:
 
 Endring av logoen i øvre venstre hjørnet:
 
+
+Tillegg for Arkivet:
 
 
 
