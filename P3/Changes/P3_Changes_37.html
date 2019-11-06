@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="Doc_style.css">
+	<title>P3 design changes</title>
+  </head>
+  <body>
+	<h1>P3 Design changes</h1>
+	<h3>David, Eskild, Hans, Sander</h3>
+	<h4>02.11.2019</h4>
+<h1>Link til nettsiden</h1>
+	<a href=http://folk.ntnu.no/hkvie/> http://folk.ntnu.no/hkvie/ </a>
+	<h1>
+  	Endringer vi gjorde underveis
+	</h1>
+	<h2>
+  	Side-layout og utforming
+	</h2>
+	<ul>
+  	<li>Endring i font, etter tilbakemeldinger fra klient til Arial.</li>
+  	<li>Farger:
+  	<ul>
+    	<li>Tekst: Endret till mørk grå og ikke ren sort.</li>
+    	<li>Lenker i avsnitt: Ikke relevant, for prosjektet, så standard.</li>
+    	<li>Header: Revyrød bakgrunn, gul tekst. Både navbar og logo ble plassert på headeren.</li>
+    	<li>Footer: Endret tekst innhold, og lagt inn linker og ikon til sosialemedia i footer. Dette ble gjort da vi ikke ville ha sosialemedier på inne på hovedsiden, men heller i footer. </li>
+  	</ul></li>
+	<li> Bannerelement: Disse tar opp hele skjermbredden.</li>
+	<li> Whitespace: Det er 10% white-space på begge sidene av dokument kroppen. </li>
+  	<li>Navigasjonsbar: Knappene til de ulike undersidene endrer farge når musepekeren svever over de. De er først revyrød med gul tekst og blir en mørkere rødfarge når den sveves over.  Det benyttes enten “rullegardin” eller hamburger menyer responsivt til store og små skjermer respektivt. I hamburgermenyen får man ikke opp alle undergruppene, men må gå igjennom oversikt_undergrupper.html</li>
+  	</ul>
+	<h2>
+  	Innhold
+	</h2>
+	<h3>Startside</h3>
+	<p>
+På små skjermer er hele siden i en kollone, på større er det to eller tre.
+	Bannerene på hovedsiden veksler ikke automatisk, dette må gjøres manuelt.
+  	  	På høyre side av startsiden skal det ligge en embedded Google Calendar, for små skjermer er denne plassert nederst på siden.
+  	Det er mulighet til å legge inn artikler på startsiden, men dette må gjøres manuelt i html.
+Det er alltid en festet artikkel.
+  	</p>
+	<h3>Undergrupper</h3>
+	<p>
+	Her har vi endret på layouten til gruppene, ettersom vi fant ut at det 	var 11 og ikke 10 grupper, slik som mockupen vår presenterte i P2.
+	I tillegg kan det nevnes at tekstlinken ikke lengre har utheving.
+	</p>
+	<h4>Undergruppe: Styret</h4>
+	<p>
+	Lagt inn at det er ikke bare bilde og tekst om lederen, men også om
+	nestlederen, ettersom de ikke har noen andre sider å presenteres
+	på, og at de er høyst relevant for styresiden.
+	Vi fjernet info om når styremedlemmende ble valgt og hvor lenge de
+valgt inn for, og erstattet dette med bare bilde, tittel og kort
+beskrivelse av dem.
+
+	</p>
+	<h4>Undergruppesider</h4>
+	<p>
+	På disse har vi forandret lite forutenom at overskriftene er endret til å ikke gå ut i whitespace, samt at teksten ikke deles opp i flere avsnitt.
+Etter det har gruppene fått kontroll selv over hvordan de skal skrive
+hva de gjør og har ansvar for. Gruppebildet blir der headeren er på
+hovedsiden for undergruppesidene.
+  	</p>
+	<h3>Om oss</h3>
+	<p>
+		Lagt til at bildene i stedet kommer som en kolonne på høyresiden. Vi i tillegg lagt til et banner på denne siden.
+	</p>
+	<h3>Billettsalg</h3>
+	<p>
+  	Billettsalg er embedded et Ticket-co Iframe-element. Da dette var mulig, og enkleste måte å gjøre det på.
+	</p>
+	<h3>Påmelding</h3>
+	<p>
+  	Påmelding er ikke en egen html side lenger, men kun en link til et eksternt google forms dokument. Denne endringen kommer fra et klient-møte der revyen sa at de helst ville ha det slik.
+	</p>
+	<h3>Arkiv</h3>
+	<p>
+	Arkiv-siden inneholder bilder og video fra tidligere revyer, men kun et utvalg av bilder.  Dette gjøres ved å direkte hente bildene fra google disk. Dette er ekstremt tregt og ikke den beste løsningen, men den viser bilder. Det er enkelt å se video, men ikke før etter innholdet er lastet.
+  	Hvis vi får det til, ønsker vi å kunne sortere bildeserier basert på hvilket album de besøkende til nettsiden ønsker å se basert på en dropdown-meny eller noe lignende. Dette fikk vi ikke tid til, da disk implementasjonen tok for lang tid.
+	Det er ingen egen navigasjonsbar for arkivet, dette ble mye å implementere.
+	Videoene fra tidligere revyer er lagt til bunnen av siden etter klientens ønske.
+	</p>
+	<h3>Artikkel</h3>
+	<p>
+  	Vi har ikke impementert artikler, men modulariteten til nettsiden gjør det enkelt for klienten å gjøre dette selv, dette ble nedprioritert.
+	</p>
+	<h2>
+  	Minimumskrav (JavaScript)
+	</h2>
+	<p>
+  	De fire minimumskravene for JavaScripting er disse fire funksjonene:
+  </p>
+  	<ol>
+    	<li>Sliding_banner.js
+    	<ul> <li>Dette er et script som fader bannere inn og ut på hovedsiden.</li> </ul> </li>
+    	<li>Website_shell.js
+    	<ul> <li> Script for innlasting av header og footer, samt og gjøre disse responsive. Kode som tilpasser for skjermstørrelse.</li> </ul> </li>
+    	<li>Arkiv.js- construct_album
+    	<ul> <li> Implementasjon som først leser en JSON fil med en liste med google folders, titlene på folderen og bildefilene inni folderens ID’er, og konstruerer datastrukturen Albums(linje 62-80). Dette gjøres med Load() funksjonen på linje 13-60. Som videre konstruer de enkelte albumene med construct_album (linje 86-131) </li> </ul> </li>
+    	<li>Arkiv.js - Iterasjon igjennom bilder (interate() linje 134-180:
+    	<ul> <li>  Ved bruk av knappene og eventlisteners opprettet i constuct_album itereres det igjennom bildene i de ulike albumene.  Albumet looper. Dette gjøres ved å ha egne iterator variabler for hvert album, dette blir definert i Albums datastrukturen. </li> </ul> </li>
+	<li>Arkiv.js - Bilde i fokus (interate() linje 134-180:
+    	<ul> <li>   Ved bruk at eventlisteners for alle bildeelementene i alle albumene, vil man ved å trykke på bildet få det forstørret og sentrert på skjermen. Videre settes en gjennomsiktig grå padding til å dekke resten av siden, untatt header slik at man må trykke på elementet for å gjøre det mindre.  </li> </ul> </li>
+
+
+  	</ol>
+	<h2>
+  	Revidert Plan
+	</h2>
+	<h3>Filstruktur</h3>
+	<ul>
+		<li>Bilder</li>
+			<li><ul><li>Arkiv_Bilder</li>
+			<li>Bannere</li>
+			<li>Hjemmesideelementer</li>
+			<li>Logoer</li>
+			<li>Undergruppebilder</li></ul></li>
+		<li>Arkiv.html</li>
+		<li>Arkiv.js</li>
+		<li>Billettsalg.html</li>
+		<li>Bygg.html</li>
+		<li>Dans.html</li>
+		<li>Dynamic_header.js</li>
+		<li>index.html</li>
+		<li>Kostyme_og_rekvisitter.html</li>
+		<li>Musikk.html</li>
+		<li>Om_oss.html</li>
+		<li>Oversikt_undergrupper.html</li>
+		<li>PR_og_design.html</li>
+		<li>READ_ME.txt</li>
+		<li>Skall.html</li>
+		<li>Skribent.html</li>
+		<li>Skuespill.html</li>
+		<li>Sliding_Banner.js</li>
+		<li>style.css</li>
+		<li>Styret.html</li>
+		<li>Teknikk.html</li>
+		<li>Velferd.html</li>
+		<li>Webside_shell.js</li>
+		<li>Website_shell_style.js</li>
+		<li>Økonomi.html</li>
+		<li>Arkiv_JSON.txt</li>
+	</ul>
+	<p>Hva vi kan se her er at filstrukturen er forandret fra å ha en egen mappe for undergrupper, til at de ligger på samme nivå som alle andre html dokumenter. Javaskript har samme endring i forhold til filstrukturen, der både Modularitetmappen og JavaScripts er fjernet.
+		Videre er det implementert et google script, som returnerer en JSON fil,
+		filen er lagt ved i filstrukturen som en tekst fil, men output kan testes
+		ved å trykke på denne linken: <a href=”https://script.google.com/macros/s/AKfycbwNyPrPPJdn53o6ACXevLmP9GYNY7x6tM61JLZsJhiyJwBElnU4/exec”>  Last ned output </a></p>
+	<h3> Kunst, bilder og buttons </h3>
+<p> Alle bilder og logoen til revyen kommer fra Naborevyen. Knappene er lagd av vedkommene som har jobbet med filen der knappen er definert </p>
+
+	<h3>Gjennomføring</h3>
+	<p>
+	Denne tabellen viser hvem som gjennomførte hvilke deler av prosjektet, og til hvilke tider.
+	</p>
+	<table style="width:80%">
+  	<tr>
+    	<th>Hva</th>
+    	<th>Beskrivelse</th>
+    	<th>Hvem</th>
+    	<th>Frist</th>
+  	</tr>
+  	<tr>
+    	<td>Generell informasjon</td>
+    	<td>Bilder, tekst og annen relevant informasjon fra klienten.</td>
+    	<td>Alle</td>
+    	<td>Fortløpende utover prosjektperioden</td>
+  	</tr>
+  	<tr>
+    	<td>Om_oss.html</td>
+    	<td>Historisk informasjon om naborevyen, generell infoside.</td>
+    	<td>Eskild</td>
+    	<td>13. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Oversikt_undergrupper.html</td>
+    	<td>Side med bilder og fordeling av de ulike undergruppene.</td>
+    	<td>David</td>
+    	<td>13. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Undergrupper.html</td>
+    	<td>Side med; Banner fra gruppeaktivitet. Informasjon om gruppa og dens arbeidsområder.
+        	Bilde av Gruppeleder + info om personen. </td>
+    	<td>Eskild</td>
+    	<td>13. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Arkiv.html</td>
+    	<td>Bildearkiv og innlagt youtube videoer. Skal sorteres etter år.</td>
+    	<td>Hans Kristian</td>
+    	<td>13. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Hjemmeside.html</td>
+    	<td>Hjemmesiden. Kalender, banner, some-plugs, nyheter.</td>
+    	<td>Alle</td>
+    	<td>20. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Billettsalg.html</td>
+    	<td>Innlagt billettsalg side.</td>
+    	<td>Hans Kristian</td>
+    	<td>27. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Påmelding.html</td>
+    	<td>Ekstern link til google-påmelding</td>
+    	<td>Alle</td>
+    	<td>27. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Style.css</td>
+    	<td>Stiler, Logo, bannere og diverse.</td>
+    	<td>Alle</td>
+    	<td>27. Oktober</td>
+  	</tr>
+  	<tr>
+    	<td>Website_shell.js</td>
+    	<td>Script for innlasting av header og footer, samt og gjøre disse responsive. Kode som tilpasser for skjermstørrelse. Dette er implementeringen av modularitet</td>
+    	<td>Sander</td>
+    	<td>6. November</td>
+  	</tr>
+   	<tr>
+    	<td>Sliding_banner.js</td>
+    	<td>Bannere med bilder på rundgang.</td>
+    	<td>Eskild</td>
+    	<td>3. November</td>
+  	</tr>
+
+  	<tr>
+    	<td>Arkiv.js</td>
+    	<td>Script for å sortere, avgrense og søke i arkivet.</td>
+    	<td>Hans Kristian</td>
+    	<td>3. November</td>
+  	</tr>
+<tr>
+    	<td>Arkiv_JSON.gs</td>
+    	<td>Google script som gir JSON filen til arkiv.js</td>
+    	<td>Hans Kristian</td>
+    	<td>1. November</td>
+  	</tr>
+  	<tr>
+    	<td>READ_ME.txt</td>
+    	<td>Brukermanual slik at revyen selv kan drifte nettsiden.</td>
+    	<td>Alle</td>
+    	<td>3. November</td>
+  	</tr>
+  	<tr>
+    	<td>Brukertesting</td>
+    	<td>Masseteste siden ved hjelp av Google Forms. Live testing med et utvalg av testere.
+        	Skriving av testdokumentet.</td>
+    	<td>Alle</td>
+    	<td>10. November</td>
+  	</tr>
+	</table>
+	<p>
+		Noe som er viktig å merke med denne planen er at vi ikke satt mye hver for oss og jobbet,
+		men hjalp hverandre mye når det oppsto feil. Det gir derfor ikke mulig å si at en enkelt person
+		gjorde en enkelt ting.<br>
+	</p>
+  </body>
+</html>
