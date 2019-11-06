@@ -10,7 +10,7 @@ Det eneste du skal endre her er hva som står mellom <h2> og </h2>, endre navnet
 
 Endring av beskrivelser (f.eks. om naborevyen, eller undergruppene):
 For endringer av beskrivelser trenger du følgende filer: filen for navnet på siden/gruppen.
-Så må du gå n
+Så må du gå ned til linjen
 
 Artikler:
 
