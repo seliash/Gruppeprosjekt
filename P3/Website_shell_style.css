@@ -46,7 +46,7 @@ body{
 }
 
 /*Definerer hvor headeren er på mobile*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 899px) {
   #header_element{
     grid-area: 1/1/2/4;
   }
@@ -130,7 +130,7 @@ body{
   margin-right: 8px;
 }
 /*Styling for knappene i headeren, mobile*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 899px) {
   #navbar{
     display: none;
   }
