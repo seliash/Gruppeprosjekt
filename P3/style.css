@@ -16,18 +16,8 @@ p {
 body {
   overflow-x: hidden;
 }
-/*
-.oversikt_undergrupper_boks{
 
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3,33%);
-  grid-column-gap: 15px;
-  grid-template-rows: repeat(4,25%);
-  grid-row-gap: 25px;
-  justify-content: center;
-}
-*/
+
 .oversikt_undergrupper_boks{
   margin: auto;
   padding: 25px;
@@ -38,30 +28,21 @@ body {
   grid-row-gap: 25px;
   justify-content: space-between;
 }
-/*.oversikt_undergrupper_boks_rad{
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,325px);
-}
-.oversikt_undergrupper_boks_nederst{
-  grid-template-columns: repeat(2,1fr);
-  grid-template-columns: repeat(2,325px);
-}
-*/
+
 .oversikt_undergrupper_boks a{
   margin-bottom: 25px;
   background-color: inherit;
   line-height: 1.5;
   color: inherit;
   text-decoration: none;
- /*denne kan brukes til å forandre width på text*/
   font-size: 20px;
-  /*margin-left: 25%;*/
 }
 
 .oversikt_undergrupper_boks h3{
   text-align: center;
   margin-top: 0;
 }
+
 @media only screen and (max-width: 900px){
   .oversikt_undergrupper_boks{
     grid-template-rows: repeat(11,300px);
@@ -69,8 +50,8 @@ body {
     justify-content: center;
     grid-row-gap: 75px;
   }
-
 }
+
 
 .Arkiv_Bilder{
   display: grid;
@@ -82,16 +63,15 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-.Arkiv_Bilder{
+  .Arkiv_Bilder{
+    grid-template-columns:0.1fr repeat(4,1fr) 0.1fr;
+  }
+}
 
-  grid-template-columns:0.1fr repeat(4,1fr) 0.1fr;
-}
-}
 @media only screen and (max-width: 700px) {
-.Arkiv_Bilder{
-  grid-template-columns:0.1fr repeat(3,1fr) 0.1fr;
-
-}
+  .Arkiv_Bilder{
+    grid-template-columns:0.1fr repeat(3,1fr) 0.1fr;
+  }
 }
 
 .hoverable{ /* alle bilder i arkivet har denne*/
@@ -104,13 +84,14 @@ body {
   padding: 2.5%;
   object-fit: cover;
 }
+
 .hoverable:hover{
   padding:0px;
   margin: auto;
   width: 100%;
   height: 18vh;
-
 }
+
 .img_in_focus{ /* brukes for å få et bilde i fokus*/
   position: fixed;
   max-height: 70vh;
@@ -119,9 +100,7 @@ body {
   top:0px;
   z-index: 1;
   /*i js, settes  paddings etter bildets og skjermens størrelse*/
-
   background-color: rgba(0,0,0,0.7);
-
 }
 
 .arkiv_video_omrade{
@@ -130,48 +109,44 @@ body {
   grid-template-rows: 0.10fr 0.10fr   calc( 35vw * 9 / 16 ) 0.10fr 1fr;
   grid-template-columns: 0.5fr 0.5fr;
   grid-column-gap: 10px;
-
   justify-content: center;
 }
+
 .arkiv_video_omrade iframe{
   height: calc( 35vw * 9 / 16 )
-
 }
-iframe{
 
+iframe{
 width: 100%;
 height: 100%
-  }
+}
 
- #arkiv_body{
-
+#arkiv_body{
    padding-left: 5px;
    padding-right: 5px;
    padding-bottom: 5px;
-
 }
+
 .arkiv_title {
   margin: auto;
   grid-column: 1/end;
 }
+
 .video_top_title{
   justify-content:  center;
   margin: auto;
   grid-column: span 2;
 }
+
 .video_title{
   margin: auto;
   padding-top: 10px;
 }
-/*#video_title_1{
-  grid-column: 1
-}
-#video_title_2{
-  grid-column: 2
-}*/
+
 #video_title_3{
   grid-column: 3/end
 }
+
 .knapp {
   margin: auto;
   height: 6vh;
@@ -181,13 +156,16 @@ height: 100%
   border-color: #ffce46;
   z-index: 0;
 }
+
 .knapp:hover{
    background-color:#821308;
 }
+
 .knapp p {
   margin: auto;
   color: #ffce46;
 }
+
 
 #hovedside_boks{
   display: grid;
@@ -201,6 +179,7 @@ height: 100%
   text-align: center;
   font-weight: bold;
 }
+
 .tekst_boks{
   grid-row: 2/3;
   grid-column: 1/3;
@@ -212,6 +191,7 @@ height: 100%
  grid-column: 3;
  grid-row: 1/3;
 }
+
 #kalender_boks{
   grid-column: 4;
   grid-row: 1/3;
@@ -221,50 +201,60 @@ height: 100%
   height: 60vh;
   max-width: 80vw;
 }
-@media only screen and (max-width: 1400px) {
-    #hovedside_boks{
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50px repeat(2, auto);
-    }
 
-    #festet{
-      grid-row: 2;
-      grid-column: 2;
-    }
-    .tekst_boks{
-      grid-row: 2;
-      grid-column: 1;
-    }
-    #kalender_boks{
-      grid-row: 3;
-      grid-column: 1/3;
-    }
-    #kalender_boks iframe{
-      width: 100%;
-    }
+@media only screen and (max-width: 1400px) {
+  #hovedside_boks{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px repeat(2, auto);
   }
+
+  #festet{
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .tekst_boks{
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  #kalender_boks{
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+
+  #kalender_boks iframe{
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   #hovedside_boks{
     grid-template-columns: 1fr;
     grid-template-rows: 50px repeat(3, auto);
   }
+
   .nyheter_boks, .tekst_boks, #festet, #kalender_boks{
     grid-column: 1;
   }
+
   #festet{
     grid-row: 2;
   }
+
   .tekst_boks{
     grid-row: 3;
   }
+
   #kalender_boks{
     grid-row: 4;
   }
+
   #kalender_boks iframe{
     width: 100%;
   }
 }
+
 
 .gruppeboks {
   display: grid;
@@ -298,22 +288,25 @@ height: 100%
   width: 70%;
 }
 
-
 @media only screen and (max-width: 900px) {
   .gruppeboks {
     grid-template-columns: 1fr;
   }
+
   .gruppetekst {
     grid-column: 1;
   }
+
   .gruppeleder {
     grid-column: 1;
   }
+
   .lederbilde {
     min-height: 50vh;
     object-fit: contain;
   }
 }
+
 
 .banner_element {
   position: absolute;
