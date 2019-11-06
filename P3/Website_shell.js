@@ -146,28 +146,18 @@ velferd.href = "Velferd.html"
 undergrupper_dropdown.appendChild(velferd)
 
 //Navbar
-om_oss.appendChild(om_oss_a)
-undergrupper.appendChild(undergrupper_a)
-arkiv.appendChild(arkiv_a)
-påmelding.appendChild(påmelding_a)
-billetter.appendChild(billetter_a)
-om_oss.firstChild.href = "Om_oss.html"
-om_oss.firstChild.innerText = "Om oss"
-undergrupper.firstChild.href = "Oversikt_undergrupper.html" //--Denne må endres!
-undergrupper.firstChild.innerText = "Undergrupper"
-undergrupper.appendChild(undergrupper_dropdown)
-arkiv.firstChild.href = "Arkiv.html"
-arkiv.firstChild.innerText = "Arkiv"
-påmelding.firstChild.href = "https://docs.google.com/forms/d/e/1FAIpQLSeskn70ldpsOhrC71ehc9mKVIHHxpKQwQsjKTQEpHXSUcUXnw/viewform?usp=sf_link" //--Denne må endres!
-påmelding.firstChild.target="_blank"
-påmelding.firstChild.innerText = "Påmelding"
-billetter.firstChild.href = "Billettsalg.html"
-billetter.firstChild.innerText = "Billetter"
 navbar.appendChild(om_oss)
 navbar.appendChild(undergrupper)
 navbar.appendChild(arkiv)
 navbar.appendChild(påmelding)
 navbar.appendChild(billetter)
+for (i = 0; i < 5; i++) {
+    navbar.childNodes[i].appendChild(document.createElement("a"))
+    navbar.childNodes[i].firstChild.href = hamburger_dropdown.childNodes[i].href
+    navbar.childNodes[i].firstChild.innerText = hamburger_dropdown.childNodes[i].innerText
+}
+undergrupper.appendChild(undergrupper_dropdown)
+påmelding.firstChild.target="_blank"
 header_element.appendChild(navbar)
 
 //Hjørne-elementer

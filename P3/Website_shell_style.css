@@ -147,6 +147,7 @@ body{
   #hamburger_dropdown{
     position: absolute;
     right: 0px;
+    z-index: 1;
   }
 
   #hamburger_dropdown a{
@@ -163,15 +164,6 @@ body{
 /*Styling for knappene i headeren, mobile*/
 #header_element div a{
   height: 100%;
-}
-
-
-
-/*MOBIL: Setter navigasjonsknappene til skjult som standard og definerer styling*/
-#hamburger_dropdown{
-  display: none;
-  position: absolute;
-  z-index: 1;
 }
 
 #footer_element p{
