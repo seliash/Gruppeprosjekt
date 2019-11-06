@@ -37,9 +37,16 @@ body {
   grid-column-gap: 100px;
   grid-row-gap: 25px;
   justify-content: space-between;
-
 }
-
+/*.oversikt_undergrupper_boks_rad{
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,325px);
+}
+.oversikt_undergrupper_boks_nederst{
+  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2,325px);
+}
+*/
 .oversikt_undergrupper_boks a{
   margin-bottom: 25px;
   background-color: inherit;

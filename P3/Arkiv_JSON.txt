@@ -1,0 +1,60 @@
+
+
+function GetFilesFromFolders(){
+
+// legg inn folder iden og navnet på albumet i disse to listene
+var Albums=["1nW0qVJ_e5fznpF05trymfBANfU5H2rCc","0Bw3tuKVNh93gXzBfZHhlZkVDWTA","1TVRxoyx-JWOQlQetaCZqyIrbiI_V0xAA"];
+var Albums_names=[ "Revy 2019-Arbeid Pågår","Bilder fra Hello World","Backstage Bilder Stayin Live"];
+
+  //Oppretter outut element:
+  var output = ContentService.createTextOutput();
+  output.append(' bilder = \n {  \n "Albums": [');
+
+  for (var i = 0; i < Albums.length; ++i){
+    var folder = DriveApp.getFolderById(Albums[i]);
+    var albumName = Albums_names[i];
+    Logger.log(albumName);
+    // var folder = DriveApp.getFolderById("0Bw3tuKVNh93gXzBfZHhlZkVDWTA");
+    // var albumName="Revyen som var"
+
+    //Logger.log(folder)
+    var file= folder.getFiles()
+
+    //Logger.log(  file.next().getId()+",");
+
+    output.append( '\n{\n"album_id": "'+ Albums[i]+'",\n');
+    output.append('"album_title": "' + albumName +'",\n');
+    output.append('"images": \n [');
+    //Logger.log(JSON_strt)
+    while(file.hasNext())
+    {
+      output.append('"')
+      output.append(file.next().getId());
+      output.append('"');
+      if(file.hasNext()){
+        output.append(",");
+      }
+      else{
+        output.append("]");
+      }
+      //appends all file id's in the folder to output, with JSON formating
+    }
+    output.append( '\n }')
+    if(i!=Albums.length-1){
+      output.append(',')
+      }
+  }
+  output.append( "\n]\n}")
+  // appends end tagging
+
+  output.downloadAsFile(output)
+
+  return output;
+
+
+}
+
+
+function doGet(e){
+  return GetFilesFromFolders();
+}
