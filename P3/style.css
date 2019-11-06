@@ -254,7 +254,10 @@ height: 100%
 
 .gruppeleder {
   grid-column: 3;
-  padding: 20px;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .gruppeleder p{
@@ -262,10 +265,7 @@ height: 100%
 }
 
 .lederbilde{
-  padding-left: 20%;
-  width: 60%;
   min-height: 30vh;
-  object-fit: cover;
 }
 
 
