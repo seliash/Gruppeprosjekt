@@ -173,7 +173,8 @@ height: 100%
   grid-column: 3/end
 }
 .knapp {
-  margin: auto;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
   height: 6vh;
   width: 40px;
   position: relative;
