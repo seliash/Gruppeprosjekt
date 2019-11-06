@@ -3,13 +3,6 @@ var picsToShow=5;
 var body = document.getElementById("arkiv_body"); //arkiv boddyen
 
 arkiv_bilder=document.getElementById("");
-
-window.onresize = function() {
-  /*  console.log(x = window.matchMedia( "(max-width: 900px)" ));
-		console.log("outer width: " + window.outerWidth);
-		console.log("inner width: " + window.innerWidth);
-		console.log(window);*/
-};
 function load() {
 
 	//var x = window.matchMedia( "(max-width: 900px)" );
@@ -34,9 +27,9 @@ for (var i = 0; i < 3; i++) {
 album=bilder.Albums[i];
 //console.log(album);
 //console.log(album.album_id,album.album_title,album.images);
-a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+a=new Album(album.album_id,album.album_title,album.images);//oppretter albumet
 console.log(a);
-Albums.push(a)
+Albums.push(a);
 construct_album(album);
 }
 
@@ -46,9 +39,9 @@ for (var i = 0; i < mydata.Albums.length; i++) {
 	album=bilder.Albums[i];
 	//console.log(album);
 	//console.log(album.album_id,album.album_title,album.images);
-	a=new Album(album.album_id,album.album_title,album.images)//oppretter albumet
+	a=new Album(album.album_id,album.album_title,album.images);//oppretter albumet
 	console.log(a);
-	Albums.push(a)
+	Albums.push(a);
 	construct_album(album);
 }
 
