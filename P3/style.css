@@ -293,16 +293,20 @@ height: 100%
 }
 
 .banner_element {
-  position: relative;
+  position: absolute;
   background-color: black;
-  left: -13%;
-  min-width: 126%;
+  left: 0;
+  top: 80px;
 }
 
 .banner{
-  position: relative;
-  left: -13%;
-  min-width: 126%;
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+
+.banner_page{
+  margin-top: 30%;
 }
 
 .slides{
