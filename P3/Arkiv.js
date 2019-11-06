@@ -19,7 +19,7 @@ function load() {
 
 			picsToShow=3;
 	}
-	else if (x<900) {
+	else if (x<1000) {
 	    // window width is at less than 900px
 			picsToShow=4;
 	}
@@ -133,12 +133,14 @@ function construct_album(album){//skal injektere hele albummet i HTML
 
 function iterate(butn_node, dir){
 //console.log(butn_node.className);
+
 	pics=butn_node.parentNode;	//album noden
 	if (butn_node.className=="") {//om man trykker akkurat på teksten
 		pics=pics.parentNode
 	}
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
-//console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
+	console.log(album_data);
+console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 	if (dir=="l") {
 		pics.insertBefore(pics.childNodes[1+picsToShow],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
 			//ser om vi kan iterere videre, ellers wrapper den
@@ -165,8 +167,8 @@ function iterate(butn_node, dir){
 		}
 //setter så bildet til høyre til å være det nye bildet:
 		newId=album_data.images[album_data.img_r];
-		pics.childNodes[1+5].src=addDriveSrc(newId);
-		pics.childNodes[1+5].id=newId;
+		pics.childNodes[1+picsToShow].src=addDriveSrc(newId);
+		pics.childNodes[1+picsToShow].id=newId;
 	//oppdaterer hvor bildepekerne står
 		album_data.img_r+=1;
 		album_data.img_l+=1;

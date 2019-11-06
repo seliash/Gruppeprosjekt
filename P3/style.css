@@ -16,12 +16,17 @@ p {
 body {
   overflow-x: hidden;
 }
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 0ffe1f559eb0bfcd2511a28c695cd7879e1fcf9f
 .oversikt_undergrupper_boks{
-  margin: auto;
-  padding: 50px;
+
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3,33%);
+<<<<<<< HEAD
   grid-column-gap: 15px;
   grid-template-rows: repeat(4,25%);
   grid-row-gap: 25px;
@@ -39,6 +44,20 @@ body {
   justify-content: space-between;
 
 }
+=======
+  /*grid-column-gap: 5px;*/
+  grid-template-rows: repeat(4,auto);
+  grid-row-gap: 5px;
+  /*justify-content: center;*/
+}
+.oversikt_undergrupper_boks img{
+  max-width: 150%;
+  width: 20vh;
+  height: 20vh;
+  min-height: 20vh;
+  object-fit:cover;
+}
+>>>>>>> 0ffe1f559eb0bfcd2511a28c695cd7879e1fcf9f
 
 .oversikt_undergrupper_boks a{
   margin-bottom: 25px;
@@ -51,6 +70,7 @@ body {
   /*margin-left: 25%;*/
 }
 
+<<<<<<< HEAD
 .oversikt_undergrupper_boks h3{
   text-align: center;
   margin-top: 0;
@@ -66,7 +86,24 @@ body {
 }
 
 .Arkiv_Bilder{
+=======
+.oversikt_undergrupper_boks h1,h3{
+  text-align: center;
+  justify-content:  center;
+}
 
+@media only screen and (max-width: 900px) {
+  .oversikt_undergrupper_boks{
+
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-template-rows: repeat(12, auto);
+  }
+
+}
+>>>>>>> 0ffe1f559eb0bfcd2511a28c695cd7879e1fcf9f
+
+.Arkiv_Bilder{
   display: grid;
   grid-template-rows: 30px 20vh;
   grid-column-gap: 3px;
@@ -75,7 +112,7 @@ body {
   grid-template-columns:0.1fr repeat(5,1fr) 0.1fr;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
 .Arkiv_Bilder{
 
   grid-template-columns:0.1fr repeat(4,1fr) 0.1fr;
@@ -102,7 +139,7 @@ body {
   padding:0px;
   margin: auto;
   width: 100%;
-  max-height: 20vh;
+  height: 18vh;
 
 }
 .img_in_focus{ /* brukes for å få et bilde i fokus*/
