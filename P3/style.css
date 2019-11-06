@@ -257,10 +257,17 @@ height: 100%
   padding: 20px;
 }
 
+.gruppeleder p{
+  margin-bottom: 50px;
+}
+
 .lederbilde{
   padding-left: 20%;
   width: 60%;
+  min-height: 30vh;
+  object-fit: cover;
 }
+
 
 @media only screen and (max-width: 900px) {
   .gruppeboks {
