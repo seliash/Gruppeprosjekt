@@ -1,55 +1,28 @@
 var Albums=[];
 var picsToShow=5;
 var body = document.getElementById("arkiv_body"); //arkiv boddyen
-
 arkiv_bilder=document.getElementById("");
 function load() {
-
-	//var x = window.matchMedia( "(max-width: 900px)" );
-	x=window.innerWidth;
-	if (x<700) {
-		 // window width is at less than 700px
-
-			picsToShow=3;
-	}
-	else if (x<1000) {
-	    // window width is at less than 900px
-			picsToShow=4;
-	}
-	else {
-	    // window width is greater than 900px
-			picsToShow=5;
-	}
-
-	mydata = JSON.parse(JSON.stringify(bilder));
-for (var i = 0; i < 3; i++) {
-
-album=bilder.Albums[i];
-//console.log(album);
-//console.log(album.album_id,album.album_title,album.images);
-a=new Album(album.album_id,album.album_title,album.images);//oppretter albumet
-console.log(a);
-Albums.push(a);
-construct_album(album);
-}
-
-
-for (var i = 0; i < mydata.Albums.length; i++) {
-	//console.log(mydata.Albums[i].images);
-	album=bilder.Albums[i];
-	//console.log(album);
-	//console.log(album.album_id,album.album_title,album.images);
-	a=new Album(album.album_id,album.album_title,album.images);//oppretter albumet
-	console.log(a);
-	Albums.push(a);
-	construct_album(album);
-}
-
-	console.log(Albums);
-	//construct_album(album);
-
-//test på innlastning
-
+		x=window.innerWidth;
+		if (x<700) {
+			 // window width is at less than 700px
+				picsToShow=3;
+		}
+		else if (x<1000) {
+		    // window width is at less than 900px
+				picsToShow=4;
+		}
+		else {
+		    // window width is greater than 900px
+				picsToShow=5;
+		}
+		mydata = JSON.parse(JSON.stringify(bilder)); //henter albumdata fra JSON fila
+		for (var i = 0; i < mydata.Albums.length; i++) {
+		album=bilder.Albums[i];
+		a=new Album(album.album_id,album.album_title,album.images);//oppretter albumet
+		Albums.push(a);
+		construct_album(album);
+		}
 }
 
 class Album {
@@ -62,20 +35,16 @@ class Album {
 		this.album_node=null
 	}
 }
-
-
-function getAlbum(album_id){
+function getAlbum(album_id){ //henter ut albumet med en spesifikk id
 	for (var i = 0; i < Albums.length; i++) {
 		if (Albums[i].album_id==album_id) {
 			return Albums[i]
 		}
 	}
 }
-
-function addDriveSrc(driveID) {
+function addDriveSrc(driveID) { //Legger til drive urlen til driv ID.
  return "https://drive.google.com/uc?id="+ driveID
 }
-
 function construct_album(album){//skal injektere hele albummet i HTML
 //oppretter div - Arkiv_Bilder
 	album.album_node=document.createElement("div");
@@ -93,8 +62,7 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	p_element=document.createElement("P");
 	p_element.innerHTML='\u276E';
 	lft_butn.appendChild(p_element)
-
-// legger inn de første 5 bildene
+// legger inn de første picsToShow bildene
 //  HTML- formen på bildet
 //  <img src="https://drive.google.com/uc?id=ID_bilde" class="hoverable" alt="Arkiv" id="ID_bilde">
 	for (var i = 0; i < picsToShow; i++) {
@@ -122,18 +90,12 @@ function construct_album(album){//skal injektere hele albummet i HTML
 	document.getElementById("arkiv_Bilder").appendChild(album.album_node);
 
 }
-
-
 function iterate(butn_node, dir){
-//console.log(butn_node.className);
-
 	pics=butn_node.parentNode;	//album noden
 	if (butn_node.className=="") {//om man trykker akkurat på teksten
 		pics=pics.parentNode
 	}
 	album_data=getAlbum(pics.id); // data beholderen for albumet.
-	console.log(album_data);
-console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 	if (dir=="l") {
 		pics.insertBefore(pics.childNodes[1+picsToShow],pics.childNodes[1+1])//setter bilde nr 5 før bilde nr 1
 			//ser om vi kan iterere videre, ellers wrapper den
@@ -158,7 +120,7 @@ console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img
 		if (album_data.img_r==album_data.images.length) {
 			album_data.img_r=0;
 		}
-//setter så bildet til høyre til å være det nye bildet:
+		//setter så bildet til høyre til å være det nye bildet:
 		newId=album_data.images[album_data.img_r];
 		pics.childNodes[1+picsToShow].src=addDriveSrc(newId);
 		pics.childNodes[1+picsToShow].id=newId;
@@ -169,23 +131,16 @@ console.log( "trykt pekere venste: "+album_data.img_l+" høyre: "+album_data.img
 			album_data.img_l=0;
 		}
 		}
-	//console.log( "nye pekere venste: "+album_data.img_l+" høyre: "+album_data.img_r);
 }
 
 
 function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om bildet er trykket
 		img_element=document.getElementById(img_id);
-		console.log(  "clicked nr " + img_element);
-		console.log(img_element.className);
-	if (img_element.className=="hoverable") //ustabil knapp funksjon, men men
-	{
-	    console.log("activate");
+		if (img_element.className=="hoverable") //ustabil knapp funksjon, men men
+		{
 	    img_element.classList.remove("hoverable");
 	    //høyde=img_element.offsetHeight //får høyden til bildet inkludert padding i pixler.
-	    //console.log(høyde);
-
 	    img_element.classList.add("img_in_focus");
-
 			//setter paddinger:
 	    høyde=img_element.offsetHeight;
 			bredde=img_element.offsetWidth;
@@ -197,11 +152,7 @@ function clicked(img_id){ //bytter clasene hoverable med img_in_focus etter om b
 			img_element.style.paddingRight=" calc(" + (arkiv_bredde - bredde)/2 + "px)";
 	}
 	else {
-	    console.log("deactivate");
-			/*
-	    img_element.classList.add("hoverable");
-	    img_element.classList.remove("img_in_focus");*/
- 		img_element.style="";
+ 			img_element.style="";
 			img_element.className="hoverable";
 	}
 }

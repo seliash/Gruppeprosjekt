@@ -1,0 +1,41 @@
+ bilder = 
+ {  
+ "Albums": [
+{
+"album_id": "1YrF2N_1N24p_Vb-mR8fdxXmnOzejmPfw",
+"album_title": "Revy 2019-Arbeid Pågår",
+"images": 
+ ["1AuyxVVrpEyBwcBPbnHy2aihrptj1764T","1CE7_1-eRWjScyYHav2vTbwrNaLdV81Ld","1YLIed3ojpRCEwMBpI5NBdPkUu7Puiauu","1ltuik46hKI9CDjA7PR6_W0Op9nnXGWAo","1ENp0ZjR9dvzVX4jROhcp61aD_pph5dfJ","1D1TWQ6PQtd-zY7BjmL7FTvm8xH3wtnn-","1xBtcT5FIOG_kkErba_ecI-qvZi1DGVhY","1CUZeHm5Qf0JUq5kDmraeCpQNDHgkL-eB","1RrligL1AowgIC-duegVjvHuKcptyIwfa","1Tu9VgC2YQGxvUThOHEUjP9nD6E1-SgYL","1Z_kX-zhUXxJ_wDqZV532e4Fv4PyEW8-m","1cCSFUy8MyepbkEM88_Fl5AbnVKxOUjkt","1gb4skAkIWytuJCNhQRuXciMOL8QXY_A_","1gs9_lMeUmOOWSZ9m4xmwbRux4KibGGM8","1v44qFnPBvsnduPU8MLrIn2K2j6NJV0lN"]
+ },
+{
+"album_id": "1DkU8QSVVrNbqbqH8kzLllLTaEWWNZ3k4",
+"album_title": "Øvingshelg Arbeid Pågår",
+"images": 
+ ["1atnF7DIY917esDVYt7UfjBS5mChCSDME","1fNt5gp3GCs0RgprKucPQTEavDw461A9I","1p_yV7LDySGz-3EYEtxGnAkvo-J_QphKJ","1suj77h6FmZzzlA3JVldjvuTkijtppjpX","1iKKH8UGYZJENjAveL04eNMy4mkdLXCFi","1-qE0DdkvgN0jHZDH4E6QJgvQW5EI5H6V","14Au5vqXv4m-rWMoO_rCVk9D7O-ZcRUUm","1ebz6lEN_ApbHAktSqnL2PCuuE2VMbWwk","1gsHJxODeFMnklBnWKE6utqDvlwARL2tF","1k0I4GJEmcGqfTr_DGgP2-tWdX-3SkDSB","1sMRB__X5prBpfDAmrJuSjlZ9t_1Pj7GX","1D-amI2xmdOBxTvVM55QYZjsPMhEsWZPr","1l3E8gDwm9wC-PCJQGXKary9L07aMhR2q","1pwQ8d8FYztvGUb7vRffSzBU8xw6tV0Zc","106jLWzDZkaL3NHW0snQtRg1eh59ftky1"]
+ },
+{
+"album_id": "1lR2tGG8lrd5vdv8d97zfDjrWJNK6cDlw",
+"album_title": "Revy 2018-Stayin Live",
+"images": 
+ ["1b6FSiO8EbLtWtsP-v_0qiryXC17RMo-d","1P1w_3k25UdcWUEFl9QdyVxp0M42gXUqt","1YQ51fOzcZYn5GjNqcS_19GiQhzgH5G6q","1CBv8l7AlOupWMvNzfSjaDL_2kpHQhlpB","13OtHwTjqfd2AFK8tQ5ppzg-MErHpUw1I","10k_M_6MFRvyfynEWY26rcRrpn3rfNhA_","1ntGr2gSBREKAGUCenuj-_4y4niyvhqus","1gxzzrpyZmCVpL30KhDTEeEbs1Qy-poJM","1XgjX3a3aB9da8Wc2jFM4jWBqZ6RBE-w5","1RWsPXLtWb42qOp7fMM4TmptqrfuESpWP","1pcu8bvZnu6Q53wIBavEmHcntBaPrGiTm","1n-ZByuIRSmG_Krd2nruxHaqFQKRE-AW8","1qrn-cfAOyp92OAdyU6rCsaTkIWM6kFaS","1n73iTlSmj53xGPsEc36TmzBMcgcNLSVD"]
+ },
+{
+"album_id": "1RT0zfXsHr4WLA-UY6ur3yeuj4ktTLUWz",
+"album_title": "Backstage Stayin Live",
+"images": 
+ ["17ZvPSSnnyGHJWzi8fQAXXtcXHTtIKls9","1GXdeve9foK2-l-ttjWNe_ypKHft0pw-R","1RMWFwvrcVWaLKmrFTor043L9uFURnj2e","1V-MQ8PYP9YpLQXLp4JJDKm19QcMgw_Kp","1hlkRQfmpyocrbRB8EZbpPVIWxH6emdnE","14Seg7j_Ppn8LeQp3jGVyaw3SmdQcgNhJ","1o-1XHOEf1zrjnx2D2Nskf7TVrFfGTx3N","1yGCQvTPLfpiMi9RSgxnZNVWV7TiAStTw","1zrBWZ790d9Xx5PN4kkBR_ns_ZrWrw2GM","1LCuIpluyN3x_TgSjgg4OCARjA4S76ntE","12_oqFq_islcopDqoT-mRqCrseFF3f-My","1OvuTqaX4xVy5SuBpPPmFMwBLqWBCbCj-","1Qa3aJODchbhz55B6uXa_3WODZANUGPYg","1V21o3AWMjXXeeCiX3PpwmJXa5O7zjqm-","1beE22ZbTEGthBJeiAXc255CdrcTW8i1b","1D2zLH7W76vY3r8yaUjH_gZMm0zd-8i_P","1GU7EzvJD2SgEgFqsXAXJUbxF6CQeh6Qi","1JYORYaw6cpuLmacy6eiklsV3T32cs2O6","1RAVGeTA-l09zSGm2IXMWUA8XuouhubMJ","1QYMi4lVNjShD-cdz1Hn0KFJ7NKMmdtF1"]
+ },
+{
+"album_id": "1I4EgrkyIkmjeTQNnLRd04fHE9WSW_EoU",
+"album_title": "Bilder fra I Grevens Tid",
+"images": 
+ ["1C5GJQIHbjWb7vH4tq3uHYi_u5j2HF0zs","1Md6SihzyHBcH7bWkKegRWgYmIY9mIYMg","1iOQthbMVQf6cY676UIrf1wSvI9eP06ta","1WXw9l4ef6i4nW-Yvnrh8rwc5Upfs6nSu","1Qkcr8ZjV1ybSKjLBACHIGniQF4srdfUi","1QrrAvPQBuZ8m6-fUp590YXW-orkmyp_5","1kSdlPdhkZKKhRKI0W7qD99n5Biai5tyv","137RYk7bXe5zuwc4Cy4o99NwiVQB5_6l0","13C-u8HAuKvorvzS4L7-3ngmlc45YL4M3","1LKt9bl_Us-m0IoB0XiwfFpse8L6T3EpN","1j9h8NXSZzn5z57wBHG1EM7i-xabwmLir","1lnyc5rUH8hs9jbkzlVagS6tJisuD1s3p","1y6ppspkc3AOO1NM3DoXTXXlGUaGMi9YE","1dwnAmzAL9PsLQuqpMw7_iTzQEh2-rdyC"]
+ },
+{
+"album_id": "1kT9mmXL5REQLh8f45Gr-JeY8l-dXmFTg",
+"album_title": "Bilder fra Hello World",
+"images": 
+ ["10ROWrRmkFmnIlrIoAlbB35J2toyQKNwz","1IiurwYLz2WeQUCqtioPl5gty7pScCEip","1RYN_MqFDLq1XdiK3onthztGgf3GCb0BX","1TMzrqFev2eGRI1WJmmkmKQ5JfT_Ovo_z","1DmQWIl5_7yAJzNJL_hYAN7aUTT_QYcIF","1NG3UUExPB24VUV4AwnWdBWGMJBB_ZjdJ","1LjhWdE1pDE8M6Riqbb7i4HaEraiUOxJc","1zzIGxYeaX_bqGs4GlJ7hOoS1sVi5JuJ9","1l9uWRyLdf4WUrBAK1D-b8Rk6O0tvX4TZ","1zsVM3JyC3P-GiJF9e5Woay8h7cJx6GkO","1skfOKf49dzNwN5RPA_KROVJ6aGSe7pCe","125w4pqtEtee1gVxWaSGn2OC3AgI5yrqu","10M6gvyVqsDDDWPJnj-viw1y8PiOVsTqp","1EFtdaKe-OW56LOJN8QE2mJTi2dOVw3Ao","1Kkkt5Db2a4vKsxCXXTUN0wa_4mUI7rzU","1N_4yDhdgEpGPIlmJXjwP0rNiAex3Xg-K","1Nl8o8EAXENyDOyGdZvrOLoG8HDLlcxan","1j4mhZIhaSnp-aMP1wmVueEhyuXAoN0-N","1izQ9rBCTfRRTDZ_yUPgWylMZ2sBLMu3g","1r0zkN_rAPSgkfAltJ8e018HNiqoftkHc","1iO1ilv04oAO2ry7tY_YZx_lCFoNDcEk_","1FZDqDpedYBzODwLDHAySt7bqDgtqn3d7"]
+ }
+]
+}
